@@ -1,0 +1,51 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\Banco de Registradores\simulation\modelsim
+vd_flip_flop
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+IXmeE<R45GHZg9XJ47[lNH3
+VF6Q5NbK3kZoX7jHe6bDk:1
+S1
+Z2 dC:\altera\13.0sp1\Banco de Registradores\simulation\modelsim
+w1787689798
+8C:/altera/13.0sp1/Banco de Registradores/d_flip_flop.sv
+FC:/altera/13.0sp1/Banco de Registradores/d_flip_flop.sv
+L0 8
+Z3 OV;L;10.1d;51
+r1
+31
+Z4 o-sv -work work -O0
+!i10b 1
+!s100 7f:h^@dC>PXWg_XM79l[i0
+!s105 d_flip_flop_sv_unit
+!s85 0
+!s108 1787938350.368000
+!s107 C:/altera/13.0sp1/Banco de Registradores/d_flip_flop.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/altera/13.0sp1/Banco de Registradores|C:/altera/13.0sp1/Banco de Registradores/d_flip_flop.sv|
+!s101 -O0
+Z5 !s92 -sv -work work {+incdir+C:/altera/13.0sp1/Banco de Registradores} -O0
+vtb_leitura_banco
+R1
+!i10b 1
+!s100 o54AM]G5VDBdSf]iZU?T81
+IYLP3WUbK::c4CB]`?[F4F3
+VzL7^k]HJYBU3nG=:]R4R:0
+!s105 tb_leitura_banco_sv_unit
+S1
+R2
+w1787690090
+8C:/altera/13.0sp1/Banco de Registradores/tb_leitura_banco.sv
+FC:/altera/13.0sp1/Banco de Registradores/tb_leitura_banco.sv
+L0 10
+R3
+r1
+!s85 0
+31
+!s108 1787938350.424000
+!s107 C:/altera/13.0sp1/Banco de Registradores/tb_leitura_banco.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/altera/13.0sp1/Banco de Registradores|C:/altera/13.0sp1/Banco de Registradores/tb_leitura_banco.sv|
+!s101 -O0
+R4
+R5

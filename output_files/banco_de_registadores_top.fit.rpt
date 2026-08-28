@@ -1,6 +1,6 @@
 Fitter report for banco_de_registadores_top
-Wed Aug 26 15:22:19 2026
-Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
+Fri Aug 28 13:53:30 2026
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
 ---------------------
@@ -10,63 +10,63 @@ Quartus Prime Version 25.1std.0 Build 1129 10/21/2025 SC Lite Edition
   2. Fitter Summary
   3. Fitter Settings
   4. Parallel Compilation
-  5. Incremental Compilation Preservation Summary
-  6. Incremental Compilation Partition Settings
-  7. Incremental Compilation Placement Preservation
-  8. Pin-Out File
-  9. Fitter Resource Usage Summary
- 10. Fitter Partition Statistics
- 11. Input Pins
- 12. Output Pins
- 13. Dual Purpose and Dedicated Pins
- 14. I/O Bank Usage
- 15. All Package Pins
- 16. I/O Assignment Warnings
+  5. I/O Assignment Warnings
+  6. Incremental Compilation Preservation Summary
+  7. Incremental Compilation Partition Settings
+  8. Incremental Compilation Placement Preservation
+  9. Pin-Out File
+ 10. Fitter Resource Usage Summary
+ 11. Fitter Partition Statistics
+ 12. Input Pins
+ 13. Output Pins
+ 14. Dual Purpose and Dedicated Pins
+ 15. I/O Bank Usage
+ 16. All Package Pins
  17. Fitter Resource Utilization by Entity
  18. Delay Chain Summary
  19. Pad To Core Delay Chain Fanout
  20. Control Signals
- 21. Routing Usage Summary
- 22. LAB Logic Elements
- 23. LAB-wide Signals
- 24. LAB Signals Sourced
- 25. LAB Signals Sourced Out
- 26. LAB Distinct Inputs
- 27. I/O Rules Summary
- 28. I/O Rules Details
- 29. I/O Rules Matrix
- 30. Fitter Device Options
- 31. Operating Settings and Conditions
- 32. Fitter Messages
- 33. Fitter Suppressed Messages
+ 21. Non-Global High Fan-Out Signals
+ 22. Other Routing Usage Summary
+ 23. LAB Logic Elements
+ 24. LAB-wide Signals
+ 25. LAB Signals Sourced
+ 26. LAB Signals Sourced Out
+ 27. LAB Distinct Inputs
+ 28. I/O Rules Summary
+ 29. I/O Rules Details
+ 30. I/O Rules Matrix
+ 31. Fitter Device Options
+ 32. Operating Settings and Conditions
+ 33. Fitter Messages
+ 34. Fitter Suppressed Messages
 
 
 
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2025  Altera Corporation. All rights reserved.
+Copyright (C) 1991-2013 Altera Corporation
 Your use of Altera Corporation's design tools, logic functions 
-and other software and tools, and any partner logic 
+and other software and tools, and its AMPP partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
 to the terms and conditions of the Altera Program License 
-Subscription Agreement, the Altera Quartus Prime License Agreement,
-the Altera IP License Agreement, or other applicable license
-agreement, including, without limitation, that your use is for
-the sole purpose of programming logic devices manufactured by
-Altera and sold by Altera or its authorized distributors.  Please
-refer to the Altera Software License Subscription Agreements 
-on the Quartus Prime software download page.
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
 
 
 
 +--------------------------------------------------------------------------------------+
 ; Fitter Summary                                                                       ;
 +------------------------------------+-------------------------------------------------+
-; Fitter Status                      ; Successful - Wed Aug 26 15:22:19 2026           ;
-; Quartus Prime Version              ; 25.1std.0 Build 1129 10/21/2025 SC Lite Edition ;
+; Fitter Status                      ; Successful - Fri Aug 28 13:53:30 2026           ;
+; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; banco_de_registadores_top                       ;
 ; Top-level Entity Name              ; d_flip_flop                                     ;
 ; Family                             ; Cyclone IV GX                                   ;
@@ -88,95 +88,101 @@ on the Quartus Prime software download page.
 +------------------------------------+-------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Settings                                                                                                                                    ;
-+--------------------------------------------------------------------+---------------------------------------+---------------------------------------+
-; Option                                                             ; Setting                               ; Default Value                         ;
-+--------------------------------------------------------------------+---------------------------------------+---------------------------------------+
-; Device                                                             ; auto                                  ;                                       ;
-; Fit Attempts to Skip                                               ; 0                                     ; 0.0                                   ;
-; Use smart compilation                                              ; Off                                   ; Off                                   ;
-; Enable parallel Assembler and Timing Analyzer during compilation   ; On                                    ; On                                    ;
-; Enable compact report table                                        ; Off                                   ; Off                                   ;
-; Auto Merge PLLs                                                    ; On                                    ; On                                    ;
-; Router Timing Optimization Level                                   ; Normal                                ; Normal                                ;
-; Perform Clocking Topology Analysis During Routing                  ; Off                                   ; Off                                   ;
-; Placement Effort Multiplier                                        ; 1.0                                   ; 1.0                                   ;
-; Router Effort Multiplier                                           ; 1.0                                   ; 1.0                                   ;
-; Optimize Hold Timing                                               ; All Paths                             ; All Paths                             ;
-; Optimize Multi-Corner Timing                                       ; On                                    ; On                                    ;
-; Power Optimization During Fitting                                  ; Normal compilation                    ; Normal compilation                    ;
-; SSN Optimization                                                   ; Off                                   ; Off                                   ;
-; Optimize Timing                                                    ; Normal compilation                    ; Normal compilation                    ;
-; Optimize Timing for ECOs                                           ; Off                                   ; Off                                   ;
-; Regenerate Full Fit Report During ECO Compiles                     ; Off                                   ; Off                                   ;
-; Optimize IOC Register Placement for Timing                         ; Normal                                ; Normal                                ;
-; Limit to One Fitting Attempt                                       ; Off                                   ; Off                                   ;
-; Final Placement Optimizations                                      ; Automatically                         ; Automatically                         ;
-; Fitter Aggressive Routability Optimizations                        ; Automatically                         ; Automatically                         ;
-; Fitter Initial Placement Seed                                      ; 1                                     ; 1                                     ;
-; Periphery to Core Placement and Routing Optimization               ; Off                                   ; Off                                   ;
-; PCI I/O                                                            ; Off                                   ; Off                                   ;
-; Weak Pull-Up Resistor                                              ; Off                                   ; Off                                   ;
-; Enable Bus-Hold Circuitry                                          ; Off                                   ; Off                                   ;
-; Auto Packed Registers                                              ; Auto                                  ; Auto                                  ;
-; Auto Delay Chains                                                  ; On                                    ; On                                    ;
-; Auto Delay Chains for High Fanout Input Pins                       ; Off                                   ; Off                                   ;
-; Allow Single-ended Buffer for Differential-XSTL Input              ; Off                                   ; Off                                   ;
-; Treat Bidirectional Pin as Output Pin                              ; Off                                   ; Off                                   ;
-; Perform Physical Synthesis for Combinational Logic for Fitting     ; Off                                   ; Off                                   ;
-; Perform Physical Synthesis for Combinational Logic for Performance ; Off                                   ; Off                                   ;
-; Perform Register Duplication for Performance                       ; Off                                   ; Off                                   ;
-; Perform Logic to Memory Mapping for Fitting                        ; Off                                   ; Off                                   ;
-; Perform Register Retiming for Performance                          ; Off                                   ; Off                                   ;
-; Perform Asynchronous Signal Pipelining                             ; Off                                   ; Off                                   ;
-; Fitter Effort                                                      ; Auto Fit                              ; Auto Fit                              ;
-; Physical Synthesis Effort Level                                    ; Normal                                ; Normal                                ;
-; Logic Cell Insertion - Logic Duplication                           ; Auto                                  ; Auto                                  ;
-; Auto Register Duplication                                          ; Auto                                  ; Auto                                  ;
-; Auto Global Clock                                                  ; On                                    ; On                                    ;
-; Auto Global Register Control Signals                               ; On                                    ; On                                    ;
-; Generate GXB Reconfig MIF                                          ; Off                                   ; Off                                   ;
-; Reserve all unused pins                                            ; As input tri-stated with weak pull-up ; As input tri-stated with weak pull-up ;
-; Synchronizer Identification                                        ; Auto                                  ; Auto                                  ;
-; Enable Beneficial Skew Optimization                                ; On                                    ; On                                    ;
-; Optimize Design for Metastability                                  ; On                                    ; On                                    ;
-; Active Serial clock source                                         ; FREQ_40MHz                            ; FREQ_40MHz                            ;
-; Force Fitter to Avoid Periphery Placement Warnings                 ; Off                                   ; Off                                   ;
-; Enable input tri-state on active configuration pins in user mode   ; Off                                   ; Off                                   ;
-+--------------------------------------------------------------------+---------------------------------------+---------------------------------------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Settings                                                                                                                                            ;
++----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
+; Option                                                                     ; Setting                               ; Default Value                         ;
++----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
+; Device                                                                     ; auto                                  ;                                       ;
+; Fit Attempts to Skip                                                       ; 0                                     ; 0.0                                   ;
+; Use smart compilation                                                      ; Off                                   ; Off                                   ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                                    ; On                                    ;
+; Enable compact report table                                                ; Off                                   ; Off                                   ;
+; Auto Merge PLLs                                                            ; On                                    ; On                                    ;
+; Router Timing Optimization Level                                           ; Normal                                ; Normal                                ;
+; Perform Clocking Topology Analysis During Routing                          ; Off                                   ; Off                                   ;
+; Placement Effort Multiplier                                                ; 1.0                                   ; 1.0                                   ;
+; Router Effort Multiplier                                                   ; 1.0                                   ; 1.0                                   ;
+; Optimize Hold Timing                                                       ; All Paths                             ; All Paths                             ;
+; Optimize Multi-Corner Timing                                               ; On                                    ; On                                    ;
+; PowerPlay Power Optimization                                               ; Normal compilation                    ; Normal compilation                    ;
+; SSN Optimization                                                           ; Off                                   ; Off                                   ;
+; Optimize Timing                                                            ; Normal compilation                    ; Normal compilation                    ;
+; Optimize Timing for ECOs                                                   ; Off                                   ; Off                                   ;
+; Regenerate full fit report during ECO compiles                             ; Off                                   ; Off                                   ;
+; Optimize IOC Register Placement for Timing                                 ; Normal                                ; Normal                                ;
+; Limit to One Fitting Attempt                                               ; Off                                   ; Off                                   ;
+; Final Placement Optimizations                                              ; Automatically                         ; Automatically                         ;
+; Fitter Aggressive Routability Optimizations                                ; Automatically                         ; Automatically                         ;
+; Fitter Initial Placement Seed                                              ; 1                                     ; 1                                     ;
+; PCI I/O                                                                    ; Off                                   ; Off                                   ;
+; Weak Pull-Up Resistor                                                      ; Off                                   ; Off                                   ;
+; Enable Bus-Hold Circuitry                                                  ; Off                                   ; Off                                   ;
+; Auto Packed Registers                                                      ; Auto                                  ; Auto                                  ;
+; Auto Delay Chains                                                          ; On                                    ; On                                    ;
+; Auto Delay Chains for High Fanout Input Pins                               ; Off                                   ; Off                                   ;
+; Allow Single-ended Buffer for Differential-XSTL Input                      ; Off                                   ; Off                                   ;
+; Treat Bidirectional Pin as Output Pin                                      ; Off                                   ; Off                                   ;
+; Perform Physical Synthesis for Combinational Logic for Fitting             ; Off                                   ; Off                                   ;
+; Perform Physical Synthesis for Combinational Logic for Performance         ; Off                                   ; Off                                   ;
+; Perform Register Duplication for Performance                               ; Off                                   ; Off                                   ;
+; Perform Logic to Memory Mapping for Fitting                                ; Off                                   ; Off                                   ;
+; Perform Register Retiming for Performance                                  ; Off                                   ; Off                                   ;
+; Perform Asynchronous Signal Pipelining                                     ; Off                                   ; Off                                   ;
+; Fitter Effort                                                              ; Auto Fit                              ; Auto Fit                              ;
+; Physical Synthesis Effort Level                                            ; Normal                                ; Normal                                ;
+; Logic Cell Insertion - Logic Duplication                                   ; Auto                                  ; Auto                                  ;
+; Auto Register Duplication                                                  ; Auto                                  ; Auto                                  ;
+; Auto Global Clock                                                          ; On                                    ; On                                    ;
+; Auto Global Register Control Signals                                       ; On                                    ; On                                    ;
+; Generate GXB Reconfig MIF                                                  ; Off                                   ; Off                                   ;
+; Reserve all unused pins                                                    ; As input tri-stated with weak pull-up ; As input tri-stated with weak pull-up ;
+; Synchronizer Identification                                                ; Auto                                  ; Auto                                  ;
+; Enable Beneficial Skew Optimization                                        ; On                                    ; On                                    ;
+; Optimize Design for Metastability                                          ; On                                    ; On                                    ;
+; Active Serial clock source                                                 ; FREQ_40MHz                            ; FREQ_40MHz                            ;
+; Force Fitter to Avoid Periphery Placement Warnings                         ; Off                                   ; Off                                   ;
+; Enable input tri-state on active configuration pins in user mode           ; Off                                   ; Off                                   ;
++----------------------------------------------------------------------------+---------------------------------------+---------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 12     ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
 
 
 +------------------------------------------+
-; Parallel Compilation                     ;
-+----------------------------+-------------+
-; Processors                 ; Number      ;
-+----------------------------+-------------+
-; Number detected on machine ; 12          ;
-; Maximum allowed            ; 12          ;
-;                            ;             ;
-; Average used               ; 1.03        ;
-; Maximum used               ; 12          ;
-;                            ;             ;
-; Usage by Processor         ; % Time Used ;
-;     Processor 1            ; 100.0%      ;
-;     Processors 2-12        ;   0.2%      ;
-+----------------------------+-------------+
+; I/O Assignment Warnings                  ;
++----------+-------------------------------+
+; Pin Name ; Reason                        ;
++----------+-------------------------------+
+; q        ; Incomplete set of assignments ;
+; q_bar    ; Incomplete set of assignments ;
+; d        ; Incomplete set of assignments ;
+; clk      ; Incomplete set of assignments ;
+; rst_n    ; Incomplete set of assignments ;
++----------+-------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------+
-; Incremental Compilation Preservation Summary                                                    ;
-+---------------------+-------------------+----------------------------+--------------------------+
-; Type                ; Total [A + B]     ; From Design Partitions [A] ; From Rapid Recompile [B] ;
-+---------------------+-------------------+----------------------------+--------------------------+
-; Placement (by node) ;                   ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 22 ) ; 0.00 % ( 0 / 22 )          ; 0.00 % ( 0 / 22 )        ;
-;     -- Achieved     ; 0.00 % ( 0 / 22 ) ; 0.00 % ( 0 / 22 )          ; 0.00 % ( 0 / 22 )        ;
-;                     ;                   ;                            ;                          ;
-; Routing (by net)    ;                   ;                            ;                          ;
-;     -- Requested    ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-;     -- Achieved     ; 0.00 % ( 0 / 0 )  ; 0.00 % ( 0 / 0 )           ; 0.00 % ( 0 / 0 )         ;
-+---------------------+-------------------+----------------------------+--------------------------+
++----------------------------------------------+
+; Incremental Compilation Preservation Summary ;
++---------------------+------------------------+
+; Type                ; Value                  ;
++---------------------+------------------------+
+; Placement (by node) ;                        ;
+;     -- Requested    ; 0 / 22 ( 0.00 % )      ;
+;     -- Achieved     ; 0 / 22 ( 0.00 % )      ;
+;                     ;                        ;
+; Routing (by net)    ;                        ;
+;     -- Requested    ; 0 / 0 ( 0.00 % )       ;
+;     -- Achieved     ; 0 / 0 ( 0.00 % )       ;
++---------------------+------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -189,14 +195,14 @@ on the Quartus Prime software download page.
 +--------------------------------+----------------+-------------------+-------------------------+------------------------+------------------------------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------+
-; Incremental Compilation Placement Preservation                                                                                     ;
-+--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Partition Name                 ; Preservation Achieved ; Preservation Level Used ; Netlist Type Used ; Preservation Method ; Notes ;
-+--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
-; Top                            ; 0.00 % ( 0 / 12 )     ; N/A                     ; Source File       ; N/A                 ;       ;
-; hard_block:auto_generated_inst ; 0.00 % ( 0 / 10 )     ; N/A                     ; Source File       ; N/A                 ;       ;
-+--------------------------------+-----------------------+-------------------------+-------------------+---------------------+-------+
++------------------------------------------------------------------------------------------------------------+
+; Incremental Compilation Placement Preservation                                                             ;
++--------------------------------+---------+-------------------+-------------------------+-------------------+
+; Partition Name                 ; # Nodes ; # Preserved Nodes ; Preservation Level Used ; Netlist Type Used ;
++--------------------------------+---------+-------------------+-------------------------+-------------------+
+; Top                            ; 12      ; 0                 ; N/A                     ; Source File       ;
+; hard_block:auto_generated_inst ; 10      ; 0                 ; N/A                     ; Source File       ;
++--------------------------------+---------+-------------------+-------------------------+-------------------+
 
 
 +--------------+
@@ -235,23 +241,22 @@ The pin-out file can be found in C:/altera/13.0sp1/Banco de Registradores/output
 ;     -- Clock pins                           ; 0 / 6 ( 0 % )        ;
 ;     -- Dedicated input pins                 ; 0 / 12 ( 0 % )       ;
 ;                                             ;                      ;
+; Global signals                              ; 0                    ;
 ; M9Ks                                        ; 0 / 60 ( 0 % )       ;
 ; Total block memory bits                     ; 0 / 552,960 ( 0 % )  ;
 ; Total block memory implementation bits      ; 0 / 552,960 ( 0 % )  ;
 ; PLLs                                        ; 0 / 3 ( 0 % )        ;
-; Global signals                              ; 0                    ;
-;     -- Global clocks                        ; 0 / 20 ( 0 % )       ;
+; Global clocks                               ; 0 / 20 ( 0 % )       ;
 ; JTAGs                                       ; 0 / 1 ( 0 % )        ;
 ; CRC blocks                                  ; 0 / 1 ( 0 % )        ;
 ; ASMI blocks                                 ; 0 / 1 ( 0 % )        ;
-; Oscillator blocks                           ; 0 / 1 ( 0 % )        ;
 ; GXB Receiver channel PCSs                   ; 0 / 2 ( 0 % )        ;
 ; GXB Receiver channel PMAs                   ; 0 / 2 ( 0 % )        ;
 ; GXB Transmitter channel PCSs                ; 0 / 2 ( 0 % )        ;
 ; GXB Transmitter channel PMAs                ; 0 / 2 ( 0 % )        ;
 ; Impedance control blocks                    ; 0 / 3 ( 0 % )        ;
-; Average interconnect usage (total/H/V)      ; 0.0% / 0.0% / 0.0%   ;
-; Peak interconnect usage (total/H/V)         ; 0.0% / 0.0% / 0.1%   ;
+; Average interconnect usage (total/H/V)      ; 0% / 0% / 0%         ;
+; Peak interconnect usage (total/H/V)         ; 0% / 0% / 0%         ;
 ; Maximum fan-out                             ; 2                    ;
 ; Highest non-global fan-out                  ; 2                    ;
 ; Total fan-out                               ; 16                   ;
@@ -285,7 +290,6 @@ The pin-out file can be found in C:/altera/13.0sp1/Banco de Registradores/output
 ;                                             ;                     ;                                ;
 ; Total registers                             ; 1                   ; 0                              ;
 ;     -- Dedicated logic registers            ; 1 / 14400 ( < 1 % ) ; 0 / 14400 ( 0 % )              ;
-;     -- I/O registers                        ; 0                   ; 0                              ;
 ;                                             ;                     ;                                ;
 ; Total LABs:  partially or completely used   ; 1 / 900 ( < 1 % )   ; 0 / 900 ( 0 % )                ;
 ;                                             ;                     ;                                ;
@@ -330,15 +334,15 @@ The pin-out file can be found in C:/altera/13.0sp1/Banco de Registradores/output
 +---------------------------------------------+---------------------+--------------------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Input Pins                                                                                                                                                                                                                                                                                           ;
-+-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ; Slew Rate ;
-+-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
-; clk   ; G10   ; 6        ; 33           ; 22           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; d     ; G9    ; 6        ; 33           ; 22           ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-; rst_n ; E13   ; 6        ; 33           ; 25           ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ; no        ;
-+-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+-----------+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Input Pins                                                                                                                                                                                                                                                                               ;
++-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
+; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Combinational Fan-Out ; Registered Fan-Out ; Global ; Input Register ; Power Up High ; PCI I/O Enabled ; Bus Hold ; Weak Pull Up ; I/O Standard ; Termination ; Termination Control Block ; Location assigned by ;
++-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
+; clk   ; M6    ; 3        ; 12           ; 0            ; 7            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; d     ; M4    ; 3        ; 8            ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
+; rst_n ; L7    ; 3        ; 14           ; 0            ; 0            ; 1                     ; 0                  ; no     ; no             ; no            ; yes             ; no       ; Off          ; 2.5 V        ; Off         ; --                        ; Fitter               ;
++-------+-------+----------+--------------+--------------+--------------+-----------------------+--------------------+--------+----------------+---------------+-----------------+----------+--------------+--------------+-------------+---------------------------+----------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -346,30 +350,30 @@ The pin-out file can be found in C:/altera/13.0sp1/Banco de Registradores/output
 +-------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 ; Name  ; Pin # ; I/O Bank ; X coordinate ; Y coordinate ; Z coordinate ; Output Register ; Output Enable Register ; Power Up High ; Slew Rate ; PCI I/O Enabled ; Open Drain ; TRI Primitive ; Bus Hold ; Weak Pull Up ; I/O Standard ; Current Strength ; Termination                       ; Termination Control Block ; Output Buffer Pre-emphasis ; Voltage Output Differential ; Location assigned by ; Output Enable Source ; Output Enable Group ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
-; q     ; F11   ; 6        ; 33           ; 24           ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
-; q_bar ; F10   ; 6        ; 33           ; 24           ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; q     ; L5    ; 3        ; 14           ; 0            ; 7            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
+; q_bar ; N6    ; 3        ; 12           ; 0            ; 0            ; no              ; no                     ; no            ; 2         ; no              ; no         ; no            ; no       ; Off          ; 2.5 V        ; Default          ; Series 50 Ohm without Calibration ; --                        ; no                         ; no                          ; Fitter               ; -                    ; -                   ;
 +-------+-------+----------+--------------+--------------+--------------+-----------------+------------------------+---------------+-----------+-----------------+------------+---------------+----------+--------------+--------------+------------------+-----------------------------------+---------------------------+----------------------------+-----------------------------+----------------------+----------------------+---------------------+
 
 
-+---------------------------------------------------------------------------------------------------------+
-; Dual Purpose and Dedicated Pins                                                                         ;
-+----------+--------------------+--------------------------+------------------+---------------------------+
-; Location ; Pin Name           ; Reserved As              ; User Signal Name ; Pin Type                  ;
-+----------+--------------------+--------------------------+------------------+---------------------------+
-; L3       ; MSEL2              ; -                        ; -                ; Dedicated Programming Pin ;
-; N3       ; MSEL1              ; -                        ; -                ; Dedicated Programming Pin ;
-; K5       ; MSEL0              ; -                        ; -                ; Dedicated Programming Pin ;
-; J5       ; CONF_DONE          ; -                        ; -                ; Dedicated Programming Pin ;
-; K6       ; nSTATUS            ; -                        ; -                ; Dedicated Programming Pin ;
-; N5       ; DIFFIO_B1n, NCEO   ; Use as programming pin   ; ~ALTERA_NCEO~    ; Dual Purpose Pin          ;
-; G10      ; DIFFIO_R4n, DEV_OE ; Use as regular IO        ; clk              ; Dual Purpose Pin          ;
-; A5       ; DATA0              ; As input tri-stated      ; ~ALTERA_DATA0~   ; Dual Purpose Pin          ;
-; B5       ; ASDO               ; As input tri-stated      ; ~ALTERA_ASDO~    ; Dual Purpose Pin          ;
-; C5       ; NCSO               ; As input tri-stated      ; ~ALTERA_NCSO~    ; Dual Purpose Pin          ;
-; A4       ; DCLK               ; As output driving ground ; ~ALTERA_DCLK~    ; Dual Purpose Pin          ;
-; D5       ; nCONFIG            ; -                        ; -                ; Dedicated Programming Pin ;
-; C4       ; nCE                ; -                        ; -                ; Dedicated Programming Pin ;
-+----------+--------------------+--------------------------+------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Dual Purpose and Dedicated Pins                                                                            ;
++----------+-----------------------+--------------------------+------------------+---------------------------+
+; Location ; Pin Name              ; Reserved As              ; User Signal Name ; Pin Type                  ;
++----------+-----------------------+--------------------------+------------------+---------------------------+
+; L3       ; MSEL2                 ; -                        ; -                ; Dedicated Programming Pin ;
+; N3       ; MSEL1                 ; -                        ; -                ; Dedicated Programming Pin ;
+; K5       ; MSEL0                 ; -                        ; -                ; Dedicated Programming Pin ;
+; J5       ; CONF_DONE             ; -                        ; -                ; Dedicated Programming Pin ;
+; K6       ; nSTATUS               ; -                        ; -                ; Dedicated Programming Pin ;
+; N5       ; DIFFIO_B1n, NCEO      ; Use as programming pin   ; ~ALTERA_NCEO~    ; Dual Purpose Pin          ;
+; M6       ; DIFFIO_B2p, INIT_DONE ; Use as regular IO        ; clk              ; Dual Purpose Pin          ;
+; A5       ; DATA0                 ; As input tri-stated      ; ~ALTERA_DATA0~   ; Dual Purpose Pin          ;
+; B5       ; ASDO                  ; As input tri-stated      ; ~ALTERA_ASDO~    ; Dual Purpose Pin          ;
+; C5       ; NCSO                  ; As input tri-stated      ; ~ALTERA_NCSO~    ; Dual Purpose Pin          ;
+; A4       ; DCLK                  ; As output driving ground ; ~ALTERA_DCLK~    ; Dual Purpose Pin          ;
+; D5       ; nCONFIG               ; -                        ; -                ; Dedicated Programming Pin ;
+; C4       ; nCE                   ; -                        ; -                ; Dedicated Programming Pin ;
++----------+-----------------------+--------------------------+------------------+---------------------------+
 
 
 +------------------------------------------------------------------------------+
@@ -378,11 +382,11 @@ The pin-out file can be found in C:/altera/13.0sp1/Banco de Registradores/output
 ; I/O Bank ; Usage           ; VCCIO Voltage ; VREF Voltage ; VCCCLKIN Voltage ;
 +----------+-----------------+---------------+--------------+------------------+
 ; QL0      ; 0 / 8 ( 0 % )   ; --            ; --           ; --               ;
-; 3        ; 1 / 8 ( 13 % )  ; 2.5V          ; --           ; --               ;
+; 3        ; 6 / 8 ( 75 % )  ; 2.5V          ; --           ; --               ;
 ; 3A       ; 0 / 2 ( 0 % )   ; --            ; --           ; 2.5V             ;
 ; 4        ; 0 / 14 ( 0 % )  ; 2.5V          ; --           ; --               ;
 ; 5        ; 0 / 12 ( 0 % )  ; 2.5V          ; --           ; --               ;
-; 6        ; 5 / 12 ( 42 % ) ; 2.5V          ; --           ; --               ;
+; 6        ; 0 / 12 ( 0 % )  ; 2.5V          ; --           ; --               ;
 ; 7        ; 0 / 14 ( 0 % )  ; 2.5V          ; --           ; --               ;
 ; 8A       ; 0 / 2 ( 0 % )   ; --            ; --           ; 2.5V             ;
 ; 8        ; 0 / 5 ( 0 % )   ; 2.5V          ; --           ; --               ;
@@ -459,7 +463,7 @@ The pin-out file can be found in C:/altera/13.0sp1/Banco de Registradores/output
 ; E10      ; 66         ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; E11      ;            ; 6        ; VCCIO6                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; E12      ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; E13      ; 63         ; 6        ; rst_n                                            ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; E13      ; 63         ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; F1       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F2       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F3       ;            ; --       ; VCCL_GXB                                         ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
@@ -469,8 +473,8 @@ The pin-out file can be found in C:/altera/13.0sp1/Banco de Registradores/output
 ; F7       ;            ;          ; VCCINT                                           ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; F8       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; F9       ; 64         ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
-; F10      ; 62         ; 6        ; q_bar                                            ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; F11      ; 61         ; 6        ; q                                                ; output ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; F10      ; 62         ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; F11      ; 61         ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; F12      ; 58         ; 6        ; GND+                                             ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; F13      ; 57         ; 6        ; GND+                                             ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
 ; G1       ; 13         ; QL0      ; GXB_NC                                           ;        ;              ;         ; --         ;                 ; --       ; --           ;
@@ -481,8 +485,8 @@ The pin-out file can be found in C:/altera/13.0sp1/Banco de Registradores/output
 ; G6       ;            ;          ; VCCINT                                           ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
 ; G7       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G8       ;            ;          ; VCCINT                                           ; power  ;              ; 1.2V    ; --         ;                 ; --       ; --           ;
-; G9       ; 60         ; 6        ; d                                                ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
-; G10      ; 59         ; 6        ; clk                                              ; input  ; 2.5 V        ;         ; Row I/O    ; N               ; no       ; Off          ;
+; G9       ; 60         ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
+; G10      ; 59         ; 6        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Row I/O    ;                 ; no       ; On           ;
 ; G11      ;            ; 6        ; VCCIO6                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; G12      ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; G13      ; 55         ; 5        ; GND+                                             ;        ;              ;         ; Row I/O    ;                 ; --       ; --           ;
@@ -529,9 +533,9 @@ The pin-out file can be found in C:/altera/13.0sp1/Banco de Registradores/output
 ; L2       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; L3       ; 16         ; 3        ; ^MSEL2                                           ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; L4       ; 21         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
-; L5       ; 27         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; L5       ; 27         ; 3        ; q                                                ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; L6       ;            ; 3        ; VCCIO3                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
-; L7       ; 28         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
+; L7       ; 28         ; 3        ; rst_n                                            ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; L8       ;            ; 4        ; VCCIO4                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; L9       ; 37         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; L10      ;            ; 4        ; VCCIO4                                           ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
@@ -541,9 +545,9 @@ The pin-out file can be found in C:/altera/13.0sp1/Banco de Registradores/output
 ; M1       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; M2       ;            ; --       ; VCCA_GXB                                         ; power  ;              ; 2.5V    ; --         ;                 ; --       ; --           ;
 ; M3       ;            ;          ; NC                                               ;        ;              ;         ; --         ;                 ; --       ; --           ;
-; M4       ; 22         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; M4       ; 22         ; 3        ; d                                                ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; M5       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
-; M6       ; 25         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; M6       ; 25         ; 3        ; clk                                              ; input  ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; M7       ; 31         ; 4        ; GND+                                             ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; M8       ;            ;          ; GND                                              ; gnd    ;              ;         ; --         ;                 ; --       ; --           ;
 ; M9       ; 38         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -556,7 +560,7 @@ The pin-out file can be found in C:/altera/13.0sp1/Banco de Registradores/output
 ; N3       ; 17         ; 3        ; ^MSEL1                                           ;        ;              ;         ; --         ;                 ; --       ; --           ;
 ; N4       ; 23         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N5       ; 24         ; 3        ; ~ALTERA_NCEO~ / RESERVED_OUTPUT_OPEN_DRAIN       ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
-; N6       ; 26         ; 3        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
+; N6       ; 26         ; 3        ; q_bar                                            ; output ; 2.5 V        ;         ; Column I/O ; N               ; no       ; Off          ;
 ; N7       ; 32         ; 4        ; GND+                                             ;        ;              ;         ; Column I/O ;                 ; --       ; --           ;
 ; N8       ; 33         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
 ; N9       ; 34         ; 4        ; RESERVED_INPUT_WITH_WEAK_PULLUP                  ;        ;              ;         ; Column I/O ;                 ; no       ; On           ;
@@ -568,31 +572,13 @@ The pin-out file can be found in C:/altera/13.0sp1/Banco de Registradores/output
 Note: Pin directions (input, output or bidir) are based on device operating in user mode.
 
 
-+------------------------------------------+
-; I/O Assignment Warnings                  ;
-+----------+-------------------------------+
-; Pin Name ; Reason                        ;
-+----------+-------------------------------+
-; q        ; Incomplete set of assignments ;
-; q_bar    ; Incomplete set of assignments ;
-; d        ; Incomplete set of assignments ;
-; clk      ; Incomplete set of assignments ;
-; rst_n    ; Incomplete set of assignments ;
-; q        ; Missing location assignment   ;
-; q_bar    ; Missing location assignment   ;
-; d        ; Missing location assignment   ;
-; clk      ; Missing location assignment   ;
-; rst_n    ; Missing location assignment   ;
-+----------+-------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                                     ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
-; |d_flip_flop               ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0         ; 5    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |d_flip_flop        ; d_flip_flop ; work         ;
-+----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+-------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fitter Resource Utilization by Entity                                                                                                                                                                                                                                       ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
+; Compilation Hierarchy Node ; Logic Cells ; Dedicated Logic Registers ; I/O Registers ; Memory Bits ; M9Ks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; LUT-Only LCs ; Register-Only LCs ; LUT/Register LCs ; Full Hierarchy Name ; Library Name ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
+; |d_flip_flop               ; 1 (1)       ; 1 (1)                     ; 0 (0)         ; 0           ; 0    ; 0            ; 0       ; 0         ; 0         ; 5    ; 0            ; 0 (0)        ; 1 (1)             ; 0 (0)            ; |d_flip_flop        ; work         ;
++----------------------------+-------------+---------------------------+---------------+-------------+------+--------------+---------+-----------+-----------+------+--------------+--------------+-------------------+------------------+---------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -603,9 +589,9 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------------+---------------+-----------------------+-----+------+
 ; q     ; Output   ; --            ; --            ; --                    ; --  ; --   ;
 ; q_bar ; Output   ; --            ; --            ; --                    ; --  ; --   ;
-; d     ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
-; clk   ; Input    ; --            ; (0) 0 ps      ; --                    ; --  ; --   ;
-; rst_n ; Input    ; (6) 1314 ps   ; --            ; --                    ; --  ; --   ;
+; d     ; Input    ; (6) 1313 ps   ; --            ; --                    ; --  ; --   ;
+; clk   ; Input    ; (0) 0 ps      ; --            ; --                    ; --  ; --   ;
+; rst_n ; Input    ; (6) 1313 ps   ; --            ; --                    ; --  ; --   ;
 +-------+----------+---------------+---------------+-----------------------+-----+------+
 
 
@@ -617,7 +603,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; d                   ;                   ;         ;
 ;      - q~reg0feeder ; 0                 ; 6       ;
 ; clk                 ;                   ;         ;
-;      - q~reg0       ; 1                 ; 0       ;
+;      - q~reg0       ; 0                 ; 0       ;
 ; rst_n               ;                   ;         ;
 ;      - q~reg0       ; 0                 ; 6       ;
 +---------------------+-------------------+---------+
@@ -628,20 +614,31 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
 ; Name  ; Location ; Fan-Out ; Usage        ; Global ; Global Resource Used ; Global Line Name ; Enable Signal Source Name ;
 +-------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
-; clk   ; PIN_G10  ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
-; rst_n ; PIN_E13  ; 1       ; Async. clear ; no     ; --                   ; --               ; --                        ;
+; clk   ; PIN_M6   ; 1       ; Clock        ; no     ; --                   ; --               ; --                        ;
+; rst_n ; PIN_L7   ; 1       ; Async. clear ; no     ; --                   ; --               ; --                        ;
 +-------+----------+---------+--------------+--------+----------------------+------------------+---------------------------+
 
 
++---------------------------------+
+; Non-Global High Fan-Out Signals ;
++-------------+-------------------+
+; Name        ; Fan-Out           ;
++-------------+-------------------+
+; q~reg0      ; 2                 ;
+; rst_n~input ; 1                 ;
+; clk~input   ; 1                 ;
+; d~input     ; 1                 ;
++-------------+-------------------+
+
+
 +----------------------------------------------------------+
-; Routing Usage Summary                                    ;
+; Other Routing Usage Summary                              ;
 +-----------------------------------+----------------------+
-; Routing Resource Type             ; Usage                ;
+; Other Routing Resource Type       ; Usage                ;
 +-----------------------------------+----------------------+
-; Block interconnects               ; 4 / 42,960 ( < 1 % ) ;
+; Block interconnects               ; 5 / 42,960 ( < 1 % ) ;
 ; C16 interconnects                 ; 0 / 1,518 ( 0 % )    ;
-; C4 interconnects                  ; 2 / 26,928 ( < 1 % ) ;
-; Direct links                      ; 0 / 42,960 ( 0 % )   ;
+; C4 interconnects                  ; 5 / 26,928 ( < 1 % ) ;
 ; GXB block output buffers          ; 0 / 1,200 ( 0 % )    ;
 ; Global clocks                     ; 0 / 20 ( 0 % )       ;
 ; Interquad Reference Clock Outputs ; 0 / 1 ( 0 % )        ;
@@ -650,7 +647,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Interquad TXRX PCSTX outputs      ; 0 / 4 ( 0 % )        ;
 ; Local interconnects               ; 0 / 14,400 ( 0 % )   ;
 ; R24 interconnects                 ; 0 / 1,710 ( 0 % )    ;
-; R4 interconnects                  ; 0 / 37,740 ( 0 % )   ;
+; R4 interconnects                  ; 3 / 37,740 ( < 1 % ) ;
 +-----------------------------------+----------------------+
 
 
@@ -829,8 +826,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------+
 ; Fitter Messages ;
 +-----------------+
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (119004): Automatically selected device EP4CGX15BF14C6 for design banco_de_registadores_top
 Info (21076): High junction temperature operating condition is not set. Assuming a default value of '85'.
 Info (21076): Low junction temperature operating condition is not set. Assuming a default value of '0'.
@@ -846,8 +842,13 @@ Info (169124): Fitter converted 5 user pins into dedicated programming pins
     Info (169125): Pin ~ALTERA_NCSO~ is reserved at location C5
     Info (169125): Pin ~ALTERA_DCLK~ is reserved at location A4
 Warning (15714): Some pins have incomplete I/O assignments. Refer to the I/O Assignment Warnings report for details
-Critical Warning (169085): No exact pin location assignment(s) for 5 pins of 5 total pins. For the list of pins please refer to the I/O Assignment Warnings table in the fitter report.
-Critical Warning (332012): Synopsys Design Constraints File file not found: 'banco_de_registadores_top.sdc'. A Synopsys Design Constraints File is required by the Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Critical Warning (169085): No exact pin location assignment(s) for 5 pins of 5 total pins
+    Info (169086): Pin q not assigned to an exact location on the device
+    Info (169086): Pin q_bar not assigned to an exact location on the device
+    Info (169086): Pin d not assigned to an exact location on the device
+    Info (169086): Pin clk not assigned to an exact location on the device
+    Info (169086): Pin rst_n not assigned to an exact location on the device
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'banco_de_registadores_top.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
 Info (332144): No user constrained base clocks found in the design
 Info (332143): No user constrained clock uncertainty found in the design. Calling "derive_clock_uncertainty"
 Info (332154): The derive_clock_uncertainty command did not apply clock uncertainty to any clock-to-clock transfers.
@@ -870,8 +871,7 @@ Info (176215): I/O bank details before I/O pin placement
         Info (176213): I/O bank number 8A does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  2 pins available
         Info (176213): I/O bank number 8 does not use VREF pins and has undetermined VCCIO pins. 0 total pin(s) used --  5 pins available
         Info (176213): I/O bank number 9 does not use VREF pins and has undetermined VCCIO pins. 4 total pin(s) used --  0 pins available
-Info (171121): Fitter preparation operations ending: elapsed time is 00:00:00
-Info (14896): Fitter has disabled Advanced Physical Optimization because it is not supported for the current family.
+Info (171121): Fitter preparation operations ending: elapsed time is 00:00:01
 Info (170189): Fitter placement preparation operations beginning
 Info (170190): Fitter placement preparation operations ending: elapsed time is 00:00:00
 Info (170191): Fitter placement operations beginning
@@ -879,23 +879,23 @@ Info (170137): Fitter placement was successful
 Info (170192): Fitter placement operations ending: elapsed time is 00:00:00
 Info (170193): Fitter routing operations beginning
 Info (170195): Router estimated average interconnect usage is 0% of the available device resources
-    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X22_Y21 to location X33_Y31
+    Info (170196): Router estimated peak interconnect usage is 0% of the available device resources in the region that extends from location X11_Y0 to location X21_Y9
+Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
 Info (170199): The Fitter performed an Auto Fit compilation.  Optimizations were skipped to reduce compilation time.
     Info (170201): Optimizations that may affect the design's routability were skipped
     Info (170200): Optimizations that may affect the design's timing were skipped
-Info (170194): Fitter routing operations ending: elapsed time is 00:00:00
-Info (11888): Total time spent on timing analysis during the Fitter is 0.08 seconds.
+Info (11888): Total time spent on timing analysis during the Fitter is 0.06 seconds.
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
 Info (334003): Started post-fitting delay annotation
 Info (334004): Delay annotation completed successfully
-Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:00
+Info (11218): Fitter post-fit operations ending: elapsed time is 00:00:01
 Info (144001): Generated suppressed messages file C:/altera/13.0sp1/Banco de Registradores/output_files/banco_de_registadores_top.fit.smsg
-Info: Quartus Prime Fitter was successful. 0 errors, 5 warnings
-    Info: Peak virtual memory: 6208 megabytes
-    Info: Processing ended: Wed Aug 26 15:22:20 2026
-    Info: Elapsed time: 00:00:05
-    Info: Total CPU time (on all processors): 00:00:05
+Info: Quartus II 64-Bit Fitter was successful. 0 errors, 5 warnings
+    Info: Peak virtual memory: 4978 megabytes
+    Info: Processing ended: Fri Aug 28 13:53:30 2026
+    Info: Elapsed time: 00:00:04
+    Info: Total CPU time (on all processors): 00:00:04
 
 
 +----------------------------+

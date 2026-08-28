@@ -1,0 +1,54 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do banco_de_registadores_top_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/altera/13.0sp1/Banco\ de\ Registradores {C:/altera/13.0sp1/Banco de Registradores/d_flip_flop.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module d_flip_flop
+# 
+# Top level modules:
+# 	d_flip_flop
+# 
+# vlog -sv -work work +incdir+C:/altera/13.0sp1/Banco\ de\ Registradores {C:/altera/13.0sp1/Banco de Registradores/tb_leitura_banco.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_leitura_banco
+# 
+# Top level modules:
+# 	tb_leitura_banco
+# 
+# vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs="+acc"  tb_leitura_banco
+# vsim -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L cycloneiv_hssi_ver -L cycloneiv_pcie_hip_ver -L cycloneiv_ver -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_leitura_banco 
+# Loading sv_std.std
+# Loading work.tb_leitura_banco
+# ** Error: (vsim-3033) C:/altera/13.0sp1/Banco de Registradores/tb_leitura_banco.sv(35): Instantiation of 'banco_registradores_top' failed. The design unit was not found.
+# 
+#         Region: /tb_leitura_banco
+#         Searched libraries:
+#             C:/altera/13.0sp1/modelsim_ase/altera/verilog/altera
+#             C:/altera/13.0sp1/modelsim_ase/altera/verilog/220model
+#             C:/altera/13.0sp1/modelsim_ase/altera/verilog/sgate
+#             C:/altera/13.0sp1/modelsim_ase/altera/verilog/altera_mf
+#             C:/altera/13.0sp1/modelsim_ase/altera/verilog/altera_lnsim
+#             C:/altera/13.0sp1/modelsim_ase/altera/verilog/cycloneiv_hssi
+#             C:/altera/13.0sp1/modelsim_ase/altera/verilog/cycloneiv_pcie_hip
+#             C:/altera/13.0sp1/modelsim_ase/altera/verilog/cycloneiv
+#             C:/altera/13.0sp1/Banco de Registradores/simulation/modelsim/rtl_work
+#             C:/altera/13.0sp1/Banco de Registradores/simulation/modelsim/rtl_work
+#             C:/altera/13.0sp1/Banco de Registradores/simulation/modelsim/rtl_work
+# Error loading design
+# Error: Error loading design 
+#        Pausing macro execution 
+# MACRO ./banco_de_registadores_top_run_msim_rtl_verilog.do PAUSED at line 12
+vsim work.d_flip_flop
+# vsim work.d_flip_flop 
+# Loading sv_std.std
+# Loading work.d_flip_flop
+add wave -position insertpoint sim:/#vsim_capacity#/*
