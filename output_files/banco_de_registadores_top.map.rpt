@@ -1,5 +1,5 @@
 Analysis & Synthesis report for banco_de_registadores_top
-Fri Aug 28 13:55:02 2026
+Mon Aug 31 14:04:17 2026
 Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -14,8 +14,17 @@ Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edit
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
   8. General Register Statistics
-  9. Elapsed Time Per Partition
- 10. Analysis & Synthesis Messages
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "register_8bit:inst3|d_flip_flop:dff_block[7].dff_inst"
+ 11. Port Connectivity Checks: "register_8bit:inst3|d_flip_flop:dff_block[6].dff_inst"
+ 12. Port Connectivity Checks: "register_8bit:inst3|d_flip_flop:dff_block[5].dff_inst"
+ 13. Port Connectivity Checks: "register_8bit:inst3|d_flip_flop:dff_block[4].dff_inst"
+ 14. Port Connectivity Checks: "register_8bit:inst3|d_flip_flop:dff_block[3].dff_inst"
+ 15. Port Connectivity Checks: "register_8bit:inst3|d_flip_flop:dff_block[2].dff_inst"
+ 16. Port Connectivity Checks: "register_8bit:inst3|d_flip_flop:dff_block[1].dff_inst"
+ 17. Port Connectivity Checks: "register_8bit:inst3|d_flip_flop:dff_block[0].dff_inst"
+ 18. Elapsed Time Per Partition
+ 19. Analysis & Synthesis Messages
 
 
 
@@ -41,16 +50,16 @@ applicable agreement for further details.
 +--------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                         ;
 +------------------------------------+-------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Aug 28 13:55:02 2026           ;
+; Analysis & Synthesis Status        ; Successful - Mon Aug 31 14:04:17 2026           ;
 ; Quartus II 64-Bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition ;
 ; Revision Name                      ; banco_de_registadores_top                       ;
-; Top-level Entity Name              ; d_flip_flop                                     ;
+; Top-level Entity Name              ; banco_de_registadores_top                       ;
 ; Family                             ; Cyclone IV GX                                   ;
-; Total logic elements               ; 1                                               ;
-;     Total combinational functions  ; 0                                               ;
-;     Dedicated logic registers      ; 1                                               ;
-; Total registers                    ; 1                                               ;
-; Total pins                         ; 5                                               ;
+; Total logic elements               ; 320                                             ;
+;     Total combinational functions  ; 192                                             ;
+;     Dedicated logic registers      ; 128                                             ;
+; Total registers                    ; 128                                             ;
+; Total pins                         ; 55                                              ;
 ; Total virtual pins                 ; 0                                               ;
 ; Total memory bits                  ; 0                                               ;
 ; Embedded Multiplier 9-bit elements ; 0                                               ;
@@ -62,90 +71,90 @@ applicable agreement for further details.
 +------------------------------------+-------------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                               ;
-+----------------------------------------------------------------------------+--------------------+---------------------------+
-; Option                                                                     ; Setting            ; Default Value             ;
-+----------------------------------------------------------------------------+--------------------+---------------------------+
-; Top-level entity name                                                      ; d_flip_flop        ; banco_de_registadores_top ;
-; Family name                                                                ; Cyclone IV GX      ; Cyclone V                 ;
-; Use smart compilation                                                      ; Off                ; Off                       ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                        ;
-; Enable compact report table                                                ; Off                ; Off                       ;
-; Restructure Multiplexers                                                   ; Auto               ; Auto                      ;
-; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                       ;
-; Preserve fewer node names                                                  ; On                 ; On                        ;
-; Disable OpenCore Plus hardware evaluation                                  ; Off                ; Off                       ;
-; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001              ;
-; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993                 ;
-; State Machine Processing                                                   ; Auto               ; Auto                      ;
-; Safe State Machine                                                         ; Off                ; Off                       ;
-; Extract Verilog State Machines                                             ; On                 ; On                        ;
-; Extract VHDL State Machines                                                ; On                 ; On                        ;
-; Ignore Verilog initial constructs                                          ; Off                ; Off                       ;
-; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000                      ;
-; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                       ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                        ;
-; Infer RAMs from Raw Logic                                                  ; On                 ; On                        ;
-; Parallel Synthesis                                                         ; On                 ; On                        ;
-; DSP Block Balancing                                                        ; Auto               ; Auto                      ;
-; NOT Gate Push-Back                                                         ; On                 ; On                        ;
-; Power-Up Don't Care                                                        ; On                 ; On                        ;
-; Remove Redundant Logic Cells                                               ; Off                ; Off                       ;
-; Remove Duplicate Registers                                                 ; On                 ; On                        ;
-; Ignore CARRY Buffers                                                       ; Off                ; Off                       ;
-; Ignore CASCADE Buffers                                                     ; Off                ; Off                       ;
-; Ignore GLOBAL Buffers                                                      ; Off                ; Off                       ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                       ;
-; Ignore LCELL Buffers                                                       ; Off                ; Off                       ;
-; Ignore SOFT Buffers                                                        ; On                 ; On                        ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                       ;
-; Optimization Technique                                                     ; Balanced           ; Balanced                  ;
-; Carry Chain Length                                                         ; 70                 ; 70                        ;
-; Auto Carry Chains                                                          ; On                 ; On                        ;
-; Auto Open-Drain Pins                                                       ; On                 ; On                        ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                       ;
-; Auto ROM Replacement                                                       ; On                 ; On                        ;
-; Auto RAM Replacement                                                       ; On                 ; On                        ;
-; Auto DSP Block Replacement                                                 ; On                 ; On                        ;
-; Auto Shift Register Replacement                                            ; Auto               ; Auto                      ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto                      ;
-; Auto Clock Enable Replacement                                              ; On                 ; On                        ;
-; Strict RAM Replacement                                                     ; Off                ; Off                       ;
-; Allow Synchronous Control Signals                                          ; On                 ; On                        ;
-; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                       ;
-; Auto RAM Block Balancing                                                   ; On                 ; On                        ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                       ;
-; Auto Resource Sharing                                                      ; Off                ; Off                       ;
-; Allow Any RAM Size For Recognition                                         ; Off                ; Off                       ;
-; Allow Any ROM Size For Recognition                                         ; Off                ; Off                       ;
-; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                       ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                        ;
-; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                       ;
-; Timing-Driven Synthesis                                                    ; On                 ; On                        ;
-; Report Parameter Settings                                                  ; On                 ; On                        ;
-; Report Source Assignments                                                  ; On                 ; On                        ;
-; Report Connectivity Checks                                                 ; On                 ; On                        ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                       ;
-; Synchronization Register Chain Length                                      ; 2                  ; 2                         ;
-; PowerPlay Power Optimization                                               ; Normal compilation ; Normal compilation        ;
-; HDL message level                                                          ; Level2             ; Level2                    ;
-; Suppress Register Optimization Related Messages                            ; Off                ; Off                       ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000                      ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000                      ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                       ;
-; Clock MUX Protection                                                       ; On                 ; On                        ;
-; Auto Gated Clock Conversion                                                ; Off                ; Off                       ;
-; Block Design Naming                                                        ; Auto               ; Auto                      ;
-; SDC constraint protection                                                  ; Off                ; Off                       ;
-; Synthesis Effort                                                           ; Auto               ; Auto                      ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                        ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                       ;
-; Analysis & Synthesis Message Level                                         ; Medium             ; Medium                    ;
-; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto                      ;
-; Resource Aware Inference For Block RAM                                     ; On                 ; On                        ;
-; Synthesis Seed                                                             ; 1                  ; 1                         ;
-+----------------------------------------------------------------------------+--------------------+---------------------------+
++------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                                      ;
++----------------------------------------------------------------------------+---------------------------+---------------------------+
+; Option                                                                     ; Setting                   ; Default Value             ;
++----------------------------------------------------------------------------+---------------------------+---------------------------+
+; Top-level entity name                                                      ; banco_de_registadores_top ; banco_de_registadores_top ;
+; Family name                                                                ; Cyclone IV GX             ; Cyclone V                 ;
+; Use smart compilation                                                      ; Off                       ; Off                       ;
+; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                        ; On                        ;
+; Enable compact report table                                                ; Off                       ; Off                       ;
+; Restructure Multiplexers                                                   ; Auto                      ; Auto                      ;
+; Create Debugging Nodes for IP Cores                                        ; Off                       ; Off                       ;
+; Preserve fewer node names                                                  ; On                        ; On                        ;
+; Disable OpenCore Plus hardware evaluation                                  ; Off                       ; Off                       ;
+; Verilog Version                                                            ; Verilog_2001              ; Verilog_2001              ;
+; VHDL Version                                                               ; VHDL_1993                 ; VHDL_1993                 ;
+; State Machine Processing                                                   ; Auto                      ; Auto                      ;
+; Safe State Machine                                                         ; Off                       ; Off                       ;
+; Extract Verilog State Machines                                             ; On                        ; On                        ;
+; Extract VHDL State Machines                                                ; On                        ; On                        ;
+; Ignore Verilog initial constructs                                          ; Off                       ; Off                       ;
+; Iteration limit for constant Verilog loops                                 ; 5000                      ; 5000                      ;
+; Iteration limit for non-constant Verilog loops                             ; 250                       ; 250                       ;
+; Add Pass-Through Logic to Inferred RAMs                                    ; On                        ; On                        ;
+; Infer RAMs from Raw Logic                                                  ; On                        ; On                        ;
+; Parallel Synthesis                                                         ; On                        ; On                        ;
+; DSP Block Balancing                                                        ; Auto                      ; Auto                      ;
+; NOT Gate Push-Back                                                         ; On                        ; On                        ;
+; Power-Up Don't Care                                                        ; On                        ; On                        ;
+; Remove Redundant Logic Cells                                               ; Off                       ; Off                       ;
+; Remove Duplicate Registers                                                 ; On                        ; On                        ;
+; Ignore CARRY Buffers                                                       ; Off                       ; Off                       ;
+; Ignore CASCADE Buffers                                                     ; Off                       ; Off                       ;
+; Ignore GLOBAL Buffers                                                      ; Off                       ; Off                       ;
+; Ignore ROW GLOBAL Buffers                                                  ; Off                       ; Off                       ;
+; Ignore LCELL Buffers                                                       ; Off                       ; Off                       ;
+; Ignore SOFT Buffers                                                        ; On                        ; On                        ;
+; Limit AHDL Integers to 32 Bits                                             ; Off                       ; Off                       ;
+; Optimization Technique                                                     ; Balanced                  ; Balanced                  ;
+; Carry Chain Length                                                         ; 70                        ; 70                        ;
+; Auto Carry Chains                                                          ; On                        ; On                        ;
+; Auto Open-Drain Pins                                                       ; On                        ; On                        ;
+; Perform WYSIWYG Primitive Resynthesis                                      ; Off                       ; Off                       ;
+; Auto ROM Replacement                                                       ; On                        ; On                        ;
+; Auto RAM Replacement                                                       ; On                        ; On                        ;
+; Auto DSP Block Replacement                                                 ; On                        ; On                        ;
+; Auto Shift Register Replacement                                            ; Auto                      ; Auto                      ;
+; Allow Shift Register Merging across Hierarchies                            ; Auto                      ; Auto                      ;
+; Auto Clock Enable Replacement                                              ; On                        ; On                        ;
+; Strict RAM Replacement                                                     ; Off                       ; Off                       ;
+; Allow Synchronous Control Signals                                          ; On                        ; On                        ;
+; Force Use of Synchronous Clear Signals                                     ; Off                       ; Off                       ;
+; Auto RAM Block Balancing                                                   ; On                        ; On                        ;
+; Auto RAM to Logic Cell Conversion                                          ; Off                       ; Off                       ;
+; Auto Resource Sharing                                                      ; Off                       ; Off                       ;
+; Allow Any RAM Size For Recognition                                         ; Off                       ; Off                       ;
+; Allow Any ROM Size For Recognition                                         ; Off                       ; Off                       ;
+; Allow Any Shift Register Size For Recognition                              ; Off                       ; Off                       ;
+; Use LogicLock Constraints during Resource Balancing                        ; On                        ; On                        ;
+; Ignore translate_off and synthesis_off directives                          ; Off                       ; Off                       ;
+; Timing-Driven Synthesis                                                    ; On                        ; On                        ;
+; Report Parameter Settings                                                  ; On                        ; On                        ;
+; Report Source Assignments                                                  ; On                        ; On                        ;
+; Report Connectivity Checks                                                 ; On                        ; On                        ;
+; Ignore Maximum Fan-Out Assignments                                         ; Off                       ; Off                       ;
+; Synchronization Register Chain Length                                      ; 2                         ; 2                         ;
+; PowerPlay Power Optimization                                               ; Normal compilation        ; Normal compilation        ;
+; HDL message level                                                          ; Level2                    ; Level2                    ;
+; Suppress Register Optimization Related Messages                            ; Off                       ; Off                       ;
+; Number of Removed Registers Reported in Synthesis Report                   ; 5000                      ; 5000                      ;
+; Number of Swept Nodes Reported in Synthesis Report                         ; 5000                      ; 5000                      ;
+; Number of Inverted Registers Reported in Synthesis Report                  ; 100                       ; 100                       ;
+; Clock MUX Protection                                                       ; On                        ; On                        ;
+; Auto Gated Clock Conversion                                                ; Off                       ; Off                       ;
+; Block Design Naming                                                        ; Auto                      ; Auto                      ;
+; SDC constraint protection                                                  ; Off                       ; Off                       ;
+; Synthesis Effort                                                           ; Auto                      ; Auto                      ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                        ; On                        ;
+; Pre-Mapping Resynthesis Optimization                                       ; Off                       ; Off                       ;
+; Analysis & Synthesis Message Level                                         ; Medium                    ; Medium                    ;
+; Disable Register Merging Across Hierarchies                                ; Auto                      ; Auto                      ;
+; Resource Aware Inference For Block RAM                                     ; On                        ; On                        ;
+; Synthesis Seed                                                             ; 1                         ; 1                         ;
++----------------------------------------------------------------------------+---------------------------+---------------------------+
 
 
 Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
@@ -159,13 +168,17 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +----------------------------+--------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                            ; Library ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------+---------+
-; d_flip_flop.sv                   ; yes             ; User SystemVerilog HDL File  ; C:/altera/13.0sp1/Banco de Registradores/d_flip_flop.sv ;         ;
-+----------------------------------+-----------------+------------------------------+---------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                     ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                                           ; Library ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
+; register_8bit.sv                 ; yes             ; User SystemVerilog HDL File        ; C:/altera/13.0sp1/Banco de Registradores/register_8bit.sv              ;         ;
+; mux_16to1_8bit.sv                ; yes             ; User SystemVerilog HDL File        ; C:/altera/13.0sp1/Banco de Registradores/mux_16to1_8bit.sv             ;         ;
+; d_flip_flop.sv                   ; yes             ; User SystemVerilog HDL File        ; C:/altera/13.0sp1/Banco de Registradores/d_flip_flop.sv                ;         ;
+; banco_de_registadores_top.bdf    ; yes             ; User Block Diagram/Schematic File  ; C:/altera/13.0sp1/Banco de Registradores/banco_de_registadores_top.bdf ;         ;
+; decoder_4_to_16.sv               ; yes             ; Auto-Found SystemVerilog HDL File  ; C:/altera/13.0sp1/Banco de Registradores/decoder_4_to_16.sv            ;         ;
++----------------------------------+-----------------+------------------------------------+------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------+
@@ -173,22 +186,169 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +--------------------------+------------------+
 ; Resource                 ; Usage            ;
 +--------------------------+------------------+
-; I/O pins                 ; 5                ;
+; I/O pins                 ; 55               ;
 ; DSP block 9-bit elements ; 0                ;
-; Maximum fan-out node     ; q~reg0           ;
-; Maximum fan-out          ; 2                ;
-; Total fan-out            ; 10               ;
-; Average fan-out          ; 0.91             ;
+; Maximum fan-out node     ; clk~input        ;
+; Maximum fan-out          ; 128              ;
+; Total fan-out            ; 1335             ;
+; Average fan-out          ; 3.10             ;
 +--------------------------+------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                     ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
-; Compilation Hierarchy Node ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Library Name ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
-; |d_flip_flop               ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 5    ; 0            ; |d_flip_flop        ; work         ;
-+----------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
+; Compilation Hierarchy Node                ; LC Combinationals ; LC Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                      ; Library Name ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
+; |banco_de_registadores_top                ; 192 (0)           ; 128 (0)      ; 0           ; 0            ; 0       ; 0         ; 0         ; 55   ; 0            ; |banco_de_registadores_top                                                               ; work         ;
+;    |decoder_4_to_16:inst|                 ; 32 (32)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|decoder_4_to_16:inst                                          ; work         ;
+;    |mux_16to1_8bit:Porta_A_Leitura|       ; 80 (80)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|mux_16to1_8bit:Porta_A_Leitura                                ; work         ;
+;    |mux_16to1_8bit:Porta_B_Leitura|       ; 80 (80)           ; 0 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|mux_16to1_8bit:Porta_B_Leitura                                ; work         ;
+;    |register_8bit:8_registrador|          ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:8_registrador                                   ; work         ;
+;       |d_flip_flop:dff_block[0].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:8_registrador|d_flip_flop:dff_block[0].dff_inst ; work         ;
+;       |d_flip_flop:dff_block[1].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:8_registrador|d_flip_flop:dff_block[1].dff_inst ; work         ;
+;       |d_flip_flop:dff_block[2].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:8_registrador|d_flip_flop:dff_block[2].dff_inst ; work         ;
+;       |d_flip_flop:dff_block[3].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:8_registrador|d_flip_flop:dff_block[3].dff_inst ; work         ;
+;       |d_flip_flop:dff_block[4].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:8_registrador|d_flip_flop:dff_block[4].dff_inst ; work         ;
+;       |d_flip_flop:dff_block[5].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:8_registrador|d_flip_flop:dff_block[5].dff_inst ; work         ;
+;       |d_flip_flop:dff_block[6].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:8_registrador|d_flip_flop:dff_block[6].dff_inst ; work         ;
+;       |d_flip_flop:dff_block[7].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:8_registrador|d_flip_flop:dff_block[7].dff_inst ; work         ;
+;    |register_8bit:inst11|                 ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst11                                          ; work         ;
+;       |d_flip_flop:dff_block[0].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst11|d_flip_flop:dff_block[0].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[1].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst11|d_flip_flop:dff_block[1].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[2].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst11|d_flip_flop:dff_block[2].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[3].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst11|d_flip_flop:dff_block[3].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[4].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst11|d_flip_flop:dff_block[4].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[5].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst11|d_flip_flop:dff_block[5].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[6].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst11|d_flip_flop:dff_block[6].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[7].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst11|d_flip_flop:dff_block[7].dff_inst        ; work         ;
+;    |register_8bit:inst12|                 ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst12                                          ; work         ;
+;       |d_flip_flop:dff_block[0].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst12|d_flip_flop:dff_block[0].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[1].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst12|d_flip_flop:dff_block[1].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[2].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst12|d_flip_flop:dff_block[2].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[3].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst12|d_flip_flop:dff_block[3].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[4].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst12|d_flip_flop:dff_block[4].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[5].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst12|d_flip_flop:dff_block[5].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[6].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst12|d_flip_flop:dff_block[6].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[7].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst12|d_flip_flop:dff_block[7].dff_inst        ; work         ;
+;    |register_8bit:inst13|                 ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst13                                          ; work         ;
+;       |d_flip_flop:dff_block[0].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst13|d_flip_flop:dff_block[0].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[1].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst13|d_flip_flop:dff_block[1].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[2].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst13|d_flip_flop:dff_block[2].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[3].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst13|d_flip_flop:dff_block[3].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[4].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst13|d_flip_flop:dff_block[4].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[5].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst13|d_flip_flop:dff_block[5].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[6].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst13|d_flip_flop:dff_block[6].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[7].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst13|d_flip_flop:dff_block[7].dff_inst        ; work         ;
+;    |register_8bit:inst14|                 ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst14                                          ; work         ;
+;       |d_flip_flop:dff_block[0].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst14|d_flip_flop:dff_block[0].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[1].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst14|d_flip_flop:dff_block[1].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[2].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst14|d_flip_flop:dff_block[2].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[3].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst14|d_flip_flop:dff_block[3].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[4].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst14|d_flip_flop:dff_block[4].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[5].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst14|d_flip_flop:dff_block[5].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[6].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst14|d_flip_flop:dff_block[6].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[7].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst14|d_flip_flop:dff_block[7].dff_inst        ; work         ;
+;    |register_8bit:inst15|                 ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst15                                          ; work         ;
+;       |d_flip_flop:dff_block[0].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst15|d_flip_flop:dff_block[0].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[1].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst15|d_flip_flop:dff_block[1].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[2].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst15|d_flip_flop:dff_block[2].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[3].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst15|d_flip_flop:dff_block[3].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[4].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst15|d_flip_flop:dff_block[4].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[5].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst15|d_flip_flop:dff_block[5].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[6].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst15|d_flip_flop:dff_block[6].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[7].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst15|d_flip_flop:dff_block[7].dff_inst        ; work         ;
+;    |register_8bit:inst16|                 ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst16                                          ; work         ;
+;       |d_flip_flop:dff_block[0].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst16|d_flip_flop:dff_block[0].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[1].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst16|d_flip_flop:dff_block[1].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[2].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst16|d_flip_flop:dff_block[2].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[3].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst16|d_flip_flop:dff_block[3].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[4].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst16|d_flip_flop:dff_block[4].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[5].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst16|d_flip_flop:dff_block[5].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[6].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst16|d_flip_flop:dff_block[6].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[7].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst16|d_flip_flop:dff_block[7].dff_inst        ; work         ;
+;    |register_8bit:inst17|                 ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst17                                          ; work         ;
+;       |d_flip_flop:dff_block[0].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst17|d_flip_flop:dff_block[0].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[1].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst17|d_flip_flop:dff_block[1].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[2].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst17|d_flip_flop:dff_block[2].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[3].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst17|d_flip_flop:dff_block[3].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[4].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst17|d_flip_flop:dff_block[4].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[5].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst17|d_flip_flop:dff_block[5].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[6].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst17|d_flip_flop:dff_block[6].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[7].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst17|d_flip_flop:dff_block[7].dff_inst        ; work         ;
+;    |register_8bit:inst18|                 ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst18                                          ; work         ;
+;       |d_flip_flop:dff_block[0].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst18|d_flip_flop:dff_block[0].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[1].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst18|d_flip_flop:dff_block[1].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[2].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst18|d_flip_flop:dff_block[2].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[3].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst18|d_flip_flop:dff_block[3].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[4].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst18|d_flip_flop:dff_block[4].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[5].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst18|d_flip_flop:dff_block[5].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[6].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst18|d_flip_flop:dff_block[6].dff_inst        ; work         ;
+;       |d_flip_flop:dff_block[7].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst18|d_flip_flop:dff_block[7].dff_inst        ; work         ;
+;    |register_8bit:inst3|                  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst3                                           ; work         ;
+;       |d_flip_flop:dff_block[0].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst3|d_flip_flop:dff_block[0].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[1].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst3|d_flip_flop:dff_block[1].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[2].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst3|d_flip_flop:dff_block[2].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[3].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst3|d_flip_flop:dff_block[3].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[4].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst3|d_flip_flop:dff_block[4].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[5].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst3|d_flip_flop:dff_block[5].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[6].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst3|d_flip_flop:dff_block[6].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[7].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst3|d_flip_flop:dff_block[7].dff_inst         ; work         ;
+;    |register_8bit:inst4|                  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst4                                           ; work         ;
+;       |d_flip_flop:dff_block[0].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst4|d_flip_flop:dff_block[0].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[1].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst4|d_flip_flop:dff_block[1].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[2].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst4|d_flip_flop:dff_block[2].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[3].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst4|d_flip_flop:dff_block[3].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[4].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst4|d_flip_flop:dff_block[4].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[5].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst4|d_flip_flop:dff_block[5].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[6].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst4|d_flip_flop:dff_block[6].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[7].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst4|d_flip_flop:dff_block[7].dff_inst         ; work         ;
+;    |register_8bit:inst5|                  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst5                                           ; work         ;
+;       |d_flip_flop:dff_block[0].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst5|d_flip_flop:dff_block[0].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[1].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst5|d_flip_flop:dff_block[1].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[2].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst5|d_flip_flop:dff_block[2].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[3].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst5|d_flip_flop:dff_block[3].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[4].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst5|d_flip_flop:dff_block[4].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[5].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst5|d_flip_flop:dff_block[5].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[6].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst5|d_flip_flop:dff_block[6].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[7].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst5|d_flip_flop:dff_block[7].dff_inst         ; work         ;
+;    |register_8bit:inst6|                  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst6                                           ; work         ;
+;       |d_flip_flop:dff_block[0].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst6|d_flip_flop:dff_block[0].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[1].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst6|d_flip_flop:dff_block[1].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[2].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst6|d_flip_flop:dff_block[2].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[3].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst6|d_flip_flop:dff_block[3].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[4].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst6|d_flip_flop:dff_block[4].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[5].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst6|d_flip_flop:dff_block[5].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[6].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst6|d_flip_flop:dff_block[6].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[7].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst6|d_flip_flop:dff_block[7].dff_inst         ; work         ;
+;    |register_8bit:inst7|                  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst7                                           ; work         ;
+;       |d_flip_flop:dff_block[0].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst7|d_flip_flop:dff_block[0].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[1].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst7|d_flip_flop:dff_block[1].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[2].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst7|d_flip_flop:dff_block[2].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[3].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst7|d_flip_flop:dff_block[3].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[4].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst7|d_flip_flop:dff_block[4].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[5].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst7|d_flip_flop:dff_block[5].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[6].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst7|d_flip_flop:dff_block[6].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[7].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst7|d_flip_flop:dff_block[7].dff_inst         ; work         ;
+;    |register_8bit:inst8|                  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst8                                           ; work         ;
+;       |d_flip_flop:dff_block[0].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst8|d_flip_flop:dff_block[0].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[1].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst8|d_flip_flop:dff_block[1].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[2].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst8|d_flip_flop:dff_block[2].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[3].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst8|d_flip_flop:dff_block[3].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[4].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst8|d_flip_flop:dff_block[4].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[5].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst8|d_flip_flop:dff_block[5].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[6].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst8|d_flip_flop:dff_block[6].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[7].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst8|d_flip_flop:dff_block[7].dff_inst         ; work         ;
+;    |register_8bit:inst9|                  ; 0 (0)             ; 8 (0)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst9                                           ; work         ;
+;       |d_flip_flop:dff_block[0].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst9|d_flip_flop:dff_block[0].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[1].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst9|d_flip_flop:dff_block[1].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[2].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst9|d_flip_flop:dff_block[2].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[3].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst9|d_flip_flop:dff_block[3].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[4].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst9|d_flip_flop:dff_block[4].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[5].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst9|d_flip_flop:dff_block[5].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[6].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst9|d_flip_flop:dff_block[6].dff_inst         ; work         ;
+;       |d_flip_flop:dff_block[7].dff_inst| ; 0 (0)             ; 1 (1)        ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |banco_de_registadores_top|register_8bit:inst9|d_flip_flop:dff_block[7].dff_inst         ; work         ;
++-------------------------------------------+-------------------+--------------+-------------+--------------+---------+-----------+-----------+------+--------------+------------------------------------------------------------------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -197,14 +357,96 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 1     ;
+; Total registers                              ; 128   ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 1     ;
+; Number of registers using Asynchronous Clear ; 128   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 128   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                               ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+; 16:1               ; 8 bits    ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |banco_de_registadores_top|mux_16to1_8bit:Porta_A_Leitura|Mux0 ;
+; 16:1               ; 8 bits    ; 80 LEs        ; 80 LEs               ; 0 LEs                  ; No         ; |banco_de_registadores_top|mux_16to1_8bit:Porta_B_Leitura|Mux0 ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+----------------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register_8bit:inst3|d_flip_flop:dff_block[7].dff_inst" ;
++-------+--------+----------+-------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                               ;
++-------+--------+----------+-------------------------------------------------------+
+; q_bar ; Output ; Info     ; Explicitly unconnected                                ;
++-------+--------+----------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register_8bit:inst3|d_flip_flop:dff_block[6].dff_inst" ;
++-------+--------+----------+-------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                               ;
++-------+--------+----------+-------------------------------------------------------+
+; q_bar ; Output ; Info     ; Explicitly unconnected                                ;
++-------+--------+----------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register_8bit:inst3|d_flip_flop:dff_block[5].dff_inst" ;
++-------+--------+----------+-------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                               ;
++-------+--------+----------+-------------------------------------------------------+
+; q_bar ; Output ; Info     ; Explicitly unconnected                                ;
++-------+--------+----------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register_8bit:inst3|d_flip_flop:dff_block[4].dff_inst" ;
++-------+--------+----------+-------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                               ;
++-------+--------+----------+-------------------------------------------------------+
+; q_bar ; Output ; Info     ; Explicitly unconnected                                ;
++-------+--------+----------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register_8bit:inst3|d_flip_flop:dff_block[3].dff_inst" ;
++-------+--------+----------+-------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                               ;
++-------+--------+----------+-------------------------------------------------------+
+; q_bar ; Output ; Info     ; Explicitly unconnected                                ;
++-------+--------+----------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register_8bit:inst3|d_flip_flop:dff_block[2].dff_inst" ;
++-------+--------+----------+-------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                               ;
++-------+--------+----------+-------------------------------------------------------+
+; q_bar ; Output ; Info     ; Explicitly unconnected                                ;
++-------+--------+----------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register_8bit:inst3|d_flip_flop:dff_block[1].dff_inst" ;
++-------+--------+----------+-------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                               ;
++-------+--------+----------+-------------------------------------------------------+
+; q_bar ; Output ; Info     ; Explicitly unconnected                                ;
++-------+--------+----------+-------------------------------------------------------+
+
+
++-----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "register_8bit:inst3|d_flip_flop:dff_block[0].dff_inst" ;
++-------+--------+----------+-------------------------------------------------------+
+; Port  ; Type   ; Severity ; Details                                               ;
++-------+--------+----------+-------------------------------------------------------+
+; q_bar ; Output ; Info     ; Explicitly unconnected                                ;
++-------+--------+----------+-------------------------------------------------------+
 
 
 +-------------------------------+
@@ -222,7 +464,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus II 64-Bit Analysis & Synthesis
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Fri Aug 28 13:55:01 2026
+    Info: Processing started: Mon Aug 31 14:04:15 2026
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off banco_de_registadores_top -c banco_de_registadores_top
 Warning (20028): Parallel compilation is not licensed and has been disabled
 Info (12021): Found 1 design units, including 1 entities, in source file register_8bit.sv
@@ -234,18 +476,84 @@ Info (12021): Found 1 design units, including 1 entities, in source file d_flip_
 Info (12021): Found 1 design units, including 1 entities, in source file banco_de_registadores_top.bdf
     Info (12023): Found entity 1: banco_de_registadores_top
 Warning (12019): Can't analyze file -- file Block1.bdf is missing
-Info (12127): Elaborating entity "d_flip_flop" for the top level hierarchy
+Info (12127): Elaborating entity "banco_de_registadores_top" for the top level hierarchy
+Warning (275083): Bus "q_Reg10[7..0]" found using same base name as "q_Reg1", which might lead to a name conflict.
+Warning (275083): Bus "q_Reg11[7..0]" found using same base name as "q_Reg1", which might lead to a name conflict.
+Warning (275083): Bus "q_Reg12[7..0]" found using same base name as "q_Reg1", which might lead to a name conflict.
+Warning (275083): Bus "q_Reg13[7..0]" found using same base name as "q_Reg1", which might lead to a name conflict.
+Warning (275083): Bus "q_Reg14[7..0]" found using same base name as "q_Reg1", which might lead to a name conflict.
+Warning (275083): Bus "q_Reg15[7..0]" found using same base name as "q_Reg1", which might lead to a name conflict.
+Warning (275083): Bus "in10[7..0]" found using same base name as "in1", which might lead to a name conflict.
+Warning (275083): Bus "in11[7..0]" found using same base name as "in1", which might lead to a name conflict.
+Warning (275083): Bus "in12[7..0]" found using same base name as "in1", which might lead to a name conflict.
+Warning (275083): Bus "in13[7..0]" found using same base name as "in1", which might lead to a name conflict.
+Warning (275083): Bus "in14[7..0]" found using same base name as "in1", which might lead to a name conflict.
+Warning (275083): Bus "in15[7..0]" found using same base name as "in1", which might lead to a name conflict.
+Warning (275080): Converted elements in bus name "in1" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "in1[7..0]" to "in17..0"
+Warning (275080): Converted elements in bus name "in10" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "in10[7..0]" to "in107..0"
+Warning (275080): Converted elements in bus name "in11" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "in11[7..0]" to "in117..0"
+Warning (275080): Converted elements in bus name "in12" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "in12[7..0]" to "in127..0"
+Warning (275080): Converted elements in bus name "in13" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "in13[7..0]" to "in137..0"
+Warning (275080): Converted elements in bus name "in14" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "in14[7..0]" to "in147..0"
+Warning (275080): Converted elements in bus name "in15" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "in15[7..0]" to "in157..0"
+Warning (275083): Bus "in10[7..0]" found using same base name as "in1", which might lead to a name conflict.
+Warning (275083): Bus "in11[7..0]" found using same base name as "in1", which might lead to a name conflict.
+Warning (275083): Bus "in12[7..0]" found using same base name as "in1", which might lead to a name conflict.
+Warning (275083): Bus "in13[7..0]" found using same base name as "in1", which might lead to a name conflict.
+Warning (275083): Bus "in14[7..0]" found using same base name as "in1", which might lead to a name conflict.
+Warning (275083): Bus "in15[7..0]" found using same base name as "in1", which might lead to a name conflict.
+Warning (275080): Converted elements in bus name "in1" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "in1[7..0]" to "in17..0"
+Warning (275080): Converted elements in bus name "in10" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "in10[7..0]" to "in107..0"
+Warning (275080): Converted elements in bus name "in11" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "in11[7..0]" to "in117..0"
+Warning (275080): Converted elements in bus name "in12" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "in12[7..0]" to "in127..0"
+Warning (275080): Converted elements in bus name "in13" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "in13[7..0]" to "in137..0"
+Warning (275080): Converted elements in bus name "in14" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "in14[7..0]" to "in147..0"
+Warning (275080): Converted elements in bus name "in15" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "in15[7..0]" to "in157..0"
+Warning (275080): Converted elements in bus name "q_Reg1" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "q_Reg1[7..0]" to "q_Reg17..0"
+Warning (275080): Converted elements in bus name "q_Reg10" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "q_Reg10[7..0]" to "q_Reg107..0"
+Warning (275080): Converted elements in bus name "q_Reg11" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "q_Reg11[7..0]" to "q_Reg117..0"
+Warning (275080): Converted elements in bus name "q_Reg12" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "q_Reg12[7..0]" to "q_Reg127..0"
+Warning (275080): Converted elements in bus name "q_Reg13" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "q_Reg13[7..0]" to "q_Reg137..0"
+Warning (275080): Converted elements in bus name "q_Reg14" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "q_Reg14[7..0]" to "q_Reg147..0"
+Warning (275080): Converted elements in bus name "q_Reg15" using legacy naming rules. Make any assignments on the new names, not on the original names.
+    Warning (275081): Converted element name(s) from "q_Reg15[7..0]" to "q_Reg157..0"
+Info (12128): Elaborating entity "mux_16to1_8bit" for hierarchy "mux_16to1_8bit:Porta_A_Leitura"
+Info (12128): Elaborating entity "register_8bit" for hierarchy "register_8bit:inst3"
+Info (12128): Elaborating entity "d_flip_flop" for hierarchy "register_8bit:inst3|d_flip_flop:dff_block[0].dff_inst"
+Warning (12125): Using design file decoder_4_to_16.sv, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: decoder_4_to_16
+Info (12128): Elaborating entity "decoder_4_to_16" for hierarchy "decoder_4_to_16:inst"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 6 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
-    Info (21059): Implemented 2 output pins
-    Info (21061): Implemented 1 logic cells
-Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 2 warnings
-    Info: Peak virtual memory: 4641 megabytes
-    Info: Processing ended: Fri Aug 28 13:55:02 2026
-    Info: Elapsed time: 00:00:01
+Info (21057): Implemented 375 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 23 input pins
+    Info (21059): Implemented 32 output pins
+    Info (21061): Implemented 320 logic cells
+Info: Quartus II 64-Bit Analysis & Synthesis was successful. 0 errors, 63 warnings
+    Info: Peak virtual memory: 4638 megabytes
+    Info: Processing ended: Mon Aug 31 14:04:17 2026
+    Info: Elapsed time: 00:00:02
     Info: Total CPU time (on all processors): 00:00:01
 
 

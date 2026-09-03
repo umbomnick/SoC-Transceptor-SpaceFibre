@@ -17,15 +17,84 @@ Z3 OV;L;10.1d;51
 r1
 31
 Z4 o-sv -work work -O0
+Z5 !s92 -sv -work work {+incdir+C:/altera/13.0sp1/Banco de Registradores} -O0
 !i10b 1
 !s100 7f:h^@dC>PXWg_XM79l[i0
 !s105 d_flip_flop_sv_unit
 !s85 0
-!s108 1787938350.368000
+!s108 1788456844.719000
 !s107 C:/altera/13.0sp1/Banco de Registradores/d_flip_flop.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/altera/13.0sp1/Banco de Registradores|C:/altera/13.0sp1/Banco de Registradores/d_flip_flop.sv|
 !s101 -O0
-Z5 !s92 -sv -work work {+incdir+C:/altera/13.0sp1/Banco de Registradores} -O0
+vdecoder_4_to_16
+R1
+IVLbaXlWi=mYA6Jmd1hHb;1
+VonDHEPfoKUJ9`i01o1eK01
+S1
+R2
+w1787594113
+8C:/altera/13.0sp1/Banco de Registradores/decoder_4_to_16.sv
+FC:/altera/13.0sp1/Banco de Registradores/decoder_4_to_16.sv
+L0 11
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 X9ZPYC=4S04OhoQXXS<H`2
+!s105 decoder_4_to_16_sv_unit
+!s85 0
+!s108 1788456844.846000
+!s107 C:/altera/13.0sp1/Banco de Registradores/decoder_4_to_16.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/altera/13.0sp1/Banco de Registradores|C:/altera/13.0sp1/Banco de Registradores/decoder_4_to_16.sv|
+!s101 -O0
+vmux_16to1_8bit
+R1
+I>JYOkz=9;S1T^RAUdkGDO2
+VJgiKN^_BF]g1SLSL@?`1V3
+S1
+R2
+w1787677319
+8C:/altera/13.0sp1/Banco de Registradores/mux_16to1_8bit.sv
+FC:/altera/13.0sp1/Banco de Registradores/mux_16to1_8bit.sv
+L0 11
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 @05]:InQ6M^SIW`5d3RS63
+!s105 mux_16to1_8bit_sv_unit
+!s85 0
+!s108 1788456844.676000
+!s107 C:/altera/13.0sp1/Banco de Registradores/mux_16to1_8bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/altera/13.0sp1/Banco de Registradores|C:/altera/13.0sp1/Banco de Registradores/mux_16to1_8bit.sv|
+!s101 -O0
+vregister_8bit
+R1
+I:f>oDk4_?V?[7IU;?d5=z0
+V@a>6CR_WhH74;N`_`Zn`=3
+S1
+R2
+w1787677999
+8C:/altera/13.0sp1/Banco de Registradores/register_8bit.sv
+FC:/altera/13.0sp1/Banco de Registradores/register_8bit.sv
+L0 10
+R3
+r1
+31
+R4
+R5
+!i10b 1
+!s100 TnNP9;XdgTMH>DK]@^9Io2
+!s105 register_8bit_sv_unit
+!s85 0
+!s108 1788456844.577000
+!s107 C:/altera/13.0sp1/Banco de Registradores/register_8bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/altera/13.0sp1/Banco de Registradores|C:/altera/13.0sp1/Banco de Registradores/register_8bit.sv|
+!s101 -O0
 vtb_leitura_banco
 R1
 !i10b 1
@@ -43,7 +112,7 @@ R3
 r1
 !s85 0
 31
-!s108 1787938350.424000
+!s108 1788456844.894000
 !s107 C:/altera/13.0sp1/Banco de Registradores/tb_leitura_banco.sv|
 !s90 -reportprogress|300|-sv|-work|work|+incdir+C:/altera/13.0sp1/Banco de Registradores|C:/altera/13.0sp1/Banco de Registradores/tb_leitura_banco.sv|
 !s101 -O0

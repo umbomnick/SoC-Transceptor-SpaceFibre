@@ -1,8 +1,2077 @@
-|d_flip_flop
+|banco_de_registadores_top
+r_data_a[0] <= mux_16to1_8bit:Porta_A_Leitura.out[0]
+r_data_a[1] <= mux_16to1_8bit:Porta_A_Leitura.out[1]
+r_data_a[2] <= mux_16to1_8bit:Porta_A_Leitura.out[2]
+r_data_a[3] <= mux_16to1_8bit:Porta_A_Leitura.out[3]
+r_data_a[4] <= mux_16to1_8bit:Porta_A_Leitura.out[4]
+r_data_a[5] <= mux_16to1_8bit:Porta_A_Leitura.out[5]
+r_data_a[6] <= mux_16to1_8bit:Porta_A_Leitura.out[6]
+r_data_a[7] <= mux_16to1_8bit:Porta_A_Leitura.out[7]
+clk => register_8bit:inst3.clk
+clk => register_8bit:inst4.clk
+clk => register_8bit:inst13.clk
+clk => register_8bit:inst14.clk
+clk => register_8bit:inst15.clk
+clk => register_8bit:inst16.clk
+clk => register_8bit:inst17.clk
+clk => register_8bit:inst18.clk
+clk => register_8bit:inst5.clk
+clk => register_8bit:inst6.clk
+clk => register_8bit:inst7.clk
+clk => register_8bit:inst8.clk
+clk => register_8bit:inst9.clk
+clk => register_8bit:8_registrador.clk
+clk => register_8bit:inst11.clk
+clk => register_8bit:inst12.clk
+rst_n => register_8bit:inst3.rst_n
+rst_n => register_8bit:inst4.rst_n
+rst_n => register_8bit:inst13.rst_n
+rst_n => register_8bit:inst14.rst_n
+rst_n => register_8bit:inst15.rst_n
+rst_n => register_8bit:inst16.rst_n
+rst_n => register_8bit:inst17.rst_n
+rst_n => register_8bit:inst18.rst_n
+rst_n => register_8bit:inst5.rst_n
+rst_n => register_8bit:inst6.rst_n
+rst_n => register_8bit:inst7.rst_n
+rst_n => register_8bit:inst8.rst_n
+rst_n => register_8bit:inst9.rst_n
+rst_n => register_8bit:8_registrador.rst_n
+rst_n => register_8bit:inst11.rst_n
+rst_n => register_8bit:inst12.rst_n
+we_dec[0] <= decoder_4_to_16:inst.we_dec[0]
+we_dec[1] <= decoder_4_to_16:inst.we_dec[1]
+we_dec[2] <= decoder_4_to_16:inst.we_dec[2]
+we_dec[3] <= decoder_4_to_16:inst.we_dec[3]
+we_dec[4] <= decoder_4_to_16:inst.we_dec[4]
+we_dec[5] <= decoder_4_to_16:inst.we_dec[5]
+we_dec[6] <= decoder_4_to_16:inst.we_dec[6]
+we_dec[7] <= decoder_4_to_16:inst.we_dec[7]
+we_dec[8] <= decoder_4_to_16:inst.we_dec[8]
+we_dec[9] <= decoder_4_to_16:inst.we_dec[9]
+we_dec[10] <= decoder_4_to_16:inst.we_dec[10]
+we_dec[11] <= decoder_4_to_16:inst.we_dec[11]
+we_dec[12] <= decoder_4_to_16:inst.we_dec[12]
+we_dec[13] <= decoder_4_to_16:inst.we_dec[13]
+we_dec[14] <= decoder_4_to_16:inst.we_dec[14]
+we_dec[15] <= decoder_4_to_16:inst.we_dec[15]
+we => decoder_4_to_16:inst.we
+w_addr[0] => decoder_4_to_16:inst.w_addr[0]
+w_addr[1] => decoder_4_to_16:inst.w_addr[1]
+w_addr[2] => decoder_4_to_16:inst.w_addr[2]
+w_addr[3] => decoder_4_to_16:inst.w_addr[3]
+w_data[0] => register_8bit:inst3.d_in[0]
+w_data[0] => register_8bit:inst4.d_in[0]
+w_data[0] => register_8bit:inst13.d_in[0]
+w_data[0] => register_8bit:inst14.d_in[0]
+w_data[0] => register_8bit:inst15.d_in[0]
+w_data[0] => register_8bit:inst16.d_in[0]
+w_data[0] => register_8bit:inst17.d_in[0]
+w_data[0] => register_8bit:inst18.d_in[0]
+w_data[0] => register_8bit:inst5.d_in[0]
+w_data[0] => register_8bit:inst6.d_in[0]
+w_data[0] => register_8bit:inst7.d_in[0]
+w_data[0] => register_8bit:inst8.d_in[0]
+w_data[0] => register_8bit:inst9.d_in[0]
+w_data[0] => register_8bit:8_registrador.d_in[0]
+w_data[0] => register_8bit:inst11.d_in[0]
+w_data[0] => register_8bit:inst12.d_in[0]
+w_data[1] => register_8bit:inst3.d_in[1]
+w_data[1] => register_8bit:inst4.d_in[1]
+w_data[1] => register_8bit:inst13.d_in[1]
+w_data[1] => register_8bit:inst14.d_in[1]
+w_data[1] => register_8bit:inst15.d_in[1]
+w_data[1] => register_8bit:inst16.d_in[1]
+w_data[1] => register_8bit:inst17.d_in[1]
+w_data[1] => register_8bit:inst18.d_in[1]
+w_data[1] => register_8bit:inst5.d_in[1]
+w_data[1] => register_8bit:inst6.d_in[1]
+w_data[1] => register_8bit:inst7.d_in[1]
+w_data[1] => register_8bit:inst8.d_in[1]
+w_data[1] => register_8bit:inst9.d_in[1]
+w_data[1] => register_8bit:8_registrador.d_in[1]
+w_data[1] => register_8bit:inst11.d_in[1]
+w_data[1] => register_8bit:inst12.d_in[1]
+w_data[2] => register_8bit:inst3.d_in[2]
+w_data[2] => register_8bit:inst4.d_in[2]
+w_data[2] => register_8bit:inst13.d_in[2]
+w_data[2] => register_8bit:inst14.d_in[2]
+w_data[2] => register_8bit:inst15.d_in[2]
+w_data[2] => register_8bit:inst16.d_in[2]
+w_data[2] => register_8bit:inst17.d_in[2]
+w_data[2] => register_8bit:inst18.d_in[2]
+w_data[2] => register_8bit:inst5.d_in[2]
+w_data[2] => register_8bit:inst6.d_in[2]
+w_data[2] => register_8bit:inst7.d_in[2]
+w_data[2] => register_8bit:inst8.d_in[2]
+w_data[2] => register_8bit:inst9.d_in[2]
+w_data[2] => register_8bit:8_registrador.d_in[2]
+w_data[2] => register_8bit:inst11.d_in[2]
+w_data[2] => register_8bit:inst12.d_in[2]
+w_data[3] => register_8bit:inst3.d_in[3]
+w_data[3] => register_8bit:inst4.d_in[3]
+w_data[3] => register_8bit:inst13.d_in[3]
+w_data[3] => register_8bit:inst14.d_in[3]
+w_data[3] => register_8bit:inst15.d_in[3]
+w_data[3] => register_8bit:inst16.d_in[3]
+w_data[3] => register_8bit:inst17.d_in[3]
+w_data[3] => register_8bit:inst18.d_in[3]
+w_data[3] => register_8bit:inst5.d_in[3]
+w_data[3] => register_8bit:inst6.d_in[3]
+w_data[3] => register_8bit:inst7.d_in[3]
+w_data[3] => register_8bit:inst8.d_in[3]
+w_data[3] => register_8bit:inst9.d_in[3]
+w_data[3] => register_8bit:8_registrador.d_in[3]
+w_data[3] => register_8bit:inst11.d_in[3]
+w_data[3] => register_8bit:inst12.d_in[3]
+w_data[4] => register_8bit:inst3.d_in[4]
+w_data[4] => register_8bit:inst4.d_in[4]
+w_data[4] => register_8bit:inst13.d_in[4]
+w_data[4] => register_8bit:inst14.d_in[4]
+w_data[4] => register_8bit:inst15.d_in[4]
+w_data[4] => register_8bit:inst16.d_in[4]
+w_data[4] => register_8bit:inst17.d_in[4]
+w_data[4] => register_8bit:inst18.d_in[4]
+w_data[4] => register_8bit:inst5.d_in[4]
+w_data[4] => register_8bit:inst6.d_in[4]
+w_data[4] => register_8bit:inst7.d_in[4]
+w_data[4] => register_8bit:inst8.d_in[4]
+w_data[4] => register_8bit:inst9.d_in[4]
+w_data[4] => register_8bit:8_registrador.d_in[4]
+w_data[4] => register_8bit:inst11.d_in[4]
+w_data[4] => register_8bit:inst12.d_in[4]
+w_data[5] => register_8bit:inst3.d_in[5]
+w_data[5] => register_8bit:inst4.d_in[5]
+w_data[5] => register_8bit:inst13.d_in[5]
+w_data[5] => register_8bit:inst14.d_in[5]
+w_data[5] => register_8bit:inst15.d_in[5]
+w_data[5] => register_8bit:inst16.d_in[5]
+w_data[5] => register_8bit:inst17.d_in[5]
+w_data[5] => register_8bit:inst18.d_in[5]
+w_data[5] => register_8bit:inst5.d_in[5]
+w_data[5] => register_8bit:inst6.d_in[5]
+w_data[5] => register_8bit:inst7.d_in[5]
+w_data[5] => register_8bit:inst8.d_in[5]
+w_data[5] => register_8bit:inst9.d_in[5]
+w_data[5] => register_8bit:8_registrador.d_in[5]
+w_data[5] => register_8bit:inst11.d_in[5]
+w_data[5] => register_8bit:inst12.d_in[5]
+w_data[6] => register_8bit:inst3.d_in[6]
+w_data[6] => register_8bit:inst4.d_in[6]
+w_data[6] => register_8bit:inst13.d_in[6]
+w_data[6] => register_8bit:inst14.d_in[6]
+w_data[6] => register_8bit:inst15.d_in[6]
+w_data[6] => register_8bit:inst16.d_in[6]
+w_data[6] => register_8bit:inst17.d_in[6]
+w_data[6] => register_8bit:inst18.d_in[6]
+w_data[6] => register_8bit:inst5.d_in[6]
+w_data[6] => register_8bit:inst6.d_in[6]
+w_data[6] => register_8bit:inst7.d_in[6]
+w_data[6] => register_8bit:inst8.d_in[6]
+w_data[6] => register_8bit:inst9.d_in[6]
+w_data[6] => register_8bit:8_registrador.d_in[6]
+w_data[6] => register_8bit:inst11.d_in[6]
+w_data[6] => register_8bit:inst12.d_in[6]
+w_data[7] => register_8bit:inst3.d_in[7]
+w_data[7] => register_8bit:inst4.d_in[7]
+w_data[7] => register_8bit:inst13.d_in[7]
+w_data[7] => register_8bit:inst14.d_in[7]
+w_data[7] => register_8bit:inst15.d_in[7]
+w_data[7] => register_8bit:inst16.d_in[7]
+w_data[7] => register_8bit:inst17.d_in[7]
+w_data[7] => register_8bit:inst18.d_in[7]
+w_data[7] => register_8bit:inst5.d_in[7]
+w_data[7] => register_8bit:inst6.d_in[7]
+w_data[7] => register_8bit:inst7.d_in[7]
+w_data[7] => register_8bit:inst8.d_in[7]
+w_data[7] => register_8bit:inst9.d_in[7]
+w_data[7] => register_8bit:8_registrador.d_in[7]
+w_data[7] => register_8bit:inst11.d_in[7]
+w_data[7] => register_8bit:inst12.d_in[7]
+r_addr_a[0] => mux_16to1_8bit:Porta_A_Leitura.sel[0]
+r_addr_a[1] => mux_16to1_8bit:Porta_A_Leitura.sel[1]
+r_addr_a[2] => mux_16to1_8bit:Porta_A_Leitura.sel[2]
+r_addr_a[3] => mux_16to1_8bit:Porta_A_Leitura.sel[3]
+r_data_b[0] <= mux_16to1_8bit:Porta_B_Leitura.out[0]
+r_data_b[1] <= mux_16to1_8bit:Porta_B_Leitura.out[1]
+r_data_b[2] <= mux_16to1_8bit:Porta_B_Leitura.out[2]
+r_data_b[3] <= mux_16to1_8bit:Porta_B_Leitura.out[3]
+r_data_b[4] <= mux_16to1_8bit:Porta_B_Leitura.out[4]
+r_data_b[5] <= mux_16to1_8bit:Porta_B_Leitura.out[5]
+r_data_b[6] <= mux_16to1_8bit:Porta_B_Leitura.out[6]
+r_data_b[7] <= mux_16to1_8bit:Porta_B_Leitura.out[7]
+r_addr_b[0] => mux_16to1_8bit:Porta_B_Leitura.sel[0]
+r_addr_b[1] => mux_16to1_8bit:Porta_B_Leitura.sel[1]
+r_addr_b[2] => mux_16to1_8bit:Porta_B_Leitura.sel[2]
+r_addr_b[3] => mux_16to1_8bit:Porta_B_Leitura.sel[3]
+
+
+|banco_de_registadores_top|mux_16to1_8bit:Porta_A_Leitura
+in0[0] => Mux7.IN0
+in0[1] => Mux6.IN0
+in0[2] => Mux5.IN0
+in0[3] => Mux4.IN0
+in0[4] => Mux3.IN0
+in0[5] => Mux2.IN0
+in0[6] => Mux1.IN0
+in0[7] => Mux0.IN0
+in1[0] => Mux7.IN1
+in1[1] => Mux6.IN1
+in1[2] => Mux5.IN1
+in1[3] => Mux4.IN1
+in1[4] => Mux3.IN1
+in1[5] => Mux2.IN1
+in1[6] => Mux1.IN1
+in1[7] => Mux0.IN1
+in2[0] => Mux7.IN2
+in2[1] => Mux6.IN2
+in2[2] => Mux5.IN2
+in2[3] => Mux4.IN2
+in2[4] => Mux3.IN2
+in2[5] => Mux2.IN2
+in2[6] => Mux1.IN2
+in2[7] => Mux0.IN2
+in3[0] => Mux7.IN3
+in3[1] => Mux6.IN3
+in3[2] => Mux5.IN3
+in3[3] => Mux4.IN3
+in3[4] => Mux3.IN3
+in3[5] => Mux2.IN3
+in3[6] => Mux1.IN3
+in3[7] => Mux0.IN3
+in4[0] => Mux7.IN4
+in4[1] => Mux6.IN4
+in4[2] => Mux5.IN4
+in4[3] => Mux4.IN4
+in4[4] => Mux3.IN4
+in4[5] => Mux2.IN4
+in4[6] => Mux1.IN4
+in4[7] => Mux0.IN4
+in5[0] => Mux7.IN5
+in5[1] => Mux6.IN5
+in5[2] => Mux5.IN5
+in5[3] => Mux4.IN5
+in5[4] => Mux3.IN5
+in5[5] => Mux2.IN5
+in5[6] => Mux1.IN5
+in5[7] => Mux0.IN5
+in6[0] => Mux7.IN6
+in6[1] => Mux6.IN6
+in6[2] => Mux5.IN6
+in6[3] => Mux4.IN6
+in6[4] => Mux3.IN6
+in6[5] => Mux2.IN6
+in6[6] => Mux1.IN6
+in6[7] => Mux0.IN6
+in7[0] => Mux7.IN7
+in7[1] => Mux6.IN7
+in7[2] => Mux5.IN7
+in7[3] => Mux4.IN7
+in7[4] => Mux3.IN7
+in7[5] => Mux2.IN7
+in7[6] => Mux1.IN7
+in7[7] => Mux0.IN7
+in8[0] => Mux7.IN8
+in8[1] => Mux6.IN8
+in8[2] => Mux5.IN8
+in8[3] => Mux4.IN8
+in8[4] => Mux3.IN8
+in8[5] => Mux2.IN8
+in8[6] => Mux1.IN8
+in8[7] => Mux0.IN8
+in9[0] => Mux7.IN9
+in9[1] => Mux6.IN9
+in9[2] => Mux5.IN9
+in9[3] => Mux4.IN9
+in9[4] => Mux3.IN9
+in9[5] => Mux2.IN9
+in9[6] => Mux1.IN9
+in9[7] => Mux0.IN9
+in10[0] => Mux7.IN10
+in10[1] => Mux6.IN10
+in10[2] => Mux5.IN10
+in10[3] => Mux4.IN10
+in10[4] => Mux3.IN10
+in10[5] => Mux2.IN10
+in10[6] => Mux1.IN10
+in10[7] => Mux0.IN10
+in11[0] => Mux7.IN11
+in11[1] => Mux6.IN11
+in11[2] => Mux5.IN11
+in11[3] => Mux4.IN11
+in11[4] => Mux3.IN11
+in11[5] => Mux2.IN11
+in11[6] => Mux1.IN11
+in11[7] => Mux0.IN11
+in12[0] => Mux7.IN12
+in12[1] => Mux6.IN12
+in12[2] => Mux5.IN12
+in12[3] => Mux4.IN12
+in12[4] => Mux3.IN12
+in12[5] => Mux2.IN12
+in12[6] => Mux1.IN12
+in12[7] => Mux0.IN12
+in13[0] => Mux7.IN13
+in13[1] => Mux6.IN13
+in13[2] => Mux5.IN13
+in13[3] => Mux4.IN13
+in13[4] => Mux3.IN13
+in13[5] => Mux2.IN13
+in13[6] => Mux1.IN13
+in13[7] => Mux0.IN13
+in14[0] => Mux7.IN14
+in14[1] => Mux6.IN14
+in14[2] => Mux5.IN14
+in14[3] => Mux4.IN14
+in14[4] => Mux3.IN14
+in14[5] => Mux2.IN14
+in14[6] => Mux1.IN14
+in14[7] => Mux0.IN14
+in15[0] => Mux7.IN15
+in15[1] => Mux6.IN15
+in15[2] => Mux5.IN15
+in15[3] => Mux4.IN15
+in15[4] => Mux3.IN15
+in15[5] => Mux2.IN15
+in15[6] => Mux1.IN15
+in15[7] => Mux0.IN15
+sel[0] => Mux0.IN19
+sel[0] => Mux1.IN19
+sel[0] => Mux2.IN19
+sel[0] => Mux3.IN19
+sel[0] => Mux4.IN19
+sel[0] => Mux5.IN19
+sel[0] => Mux6.IN19
+sel[0] => Mux7.IN19
+sel[1] => Mux0.IN18
+sel[1] => Mux1.IN18
+sel[1] => Mux2.IN18
+sel[1] => Mux3.IN18
+sel[1] => Mux4.IN18
+sel[1] => Mux5.IN18
+sel[1] => Mux6.IN18
+sel[1] => Mux7.IN18
+sel[2] => Mux0.IN17
+sel[2] => Mux1.IN17
+sel[2] => Mux2.IN17
+sel[2] => Mux3.IN17
+sel[2] => Mux4.IN17
+sel[2] => Mux5.IN17
+sel[2] => Mux6.IN17
+sel[2] => Mux7.IN17
+sel[3] => Mux0.IN16
+sel[3] => Mux1.IN16
+sel[3] => Mux2.IN16
+sel[3] => Mux3.IN16
+sel[3] => Mux4.IN16
+sel[3] => Mux5.IN16
+sel[3] => Mux6.IN16
+sel[3] => Mux7.IN16
+out[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst3
+clk => clk.IN8
+rst_n => rst_n.IN8
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+d_in[0] => next_d.DATAB
+d_in[1] => next_d.DATAB
+d_in[2] => next_d.DATAB
+d_in[3] => next_d.DATAB
+d_in[4] => next_d.DATAB
+d_in[5] => next_d.DATAB
+d_in[6] => next_d.DATAB
+d_in[7] => next_d.DATAB
+q_out[0] <= d_flip_flop:dff_block[0].dff_inst.q
+q_out[1] <= d_flip_flop:dff_block[1].dff_inst.q
+q_out[2] <= d_flip_flop:dff_block[2].dff_inst.q
+q_out[3] <= d_flip_flop:dff_block[3].dff_inst.q
+q_out[4] <= d_flip_flop:dff_block[4].dff_inst.q
+q_out[5] <= d_flip_flop:dff_block[5].dff_inst.q
+q_out[6] <= d_flip_flop:dff_block[6].dff_inst.q
+q_out[7] <= d_flip_flop:dff_block[7].dff_inst.q
+
+
+|banco_de_registadores_top|register_8bit:inst3|d_flip_flop:dff_block[0].dff_inst
 clk => q~reg0.CLK
 rst_n => q~reg0.ACLR
 d => q~reg0.DATAIN
 q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst3|d_flip_flop:dff_block[1].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst3|d_flip_flop:dff_block[2].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst3|d_flip_flop:dff_block[3].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst3|d_flip_flop:dff_block[4].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst3|d_flip_flop:dff_block[5].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst3|d_flip_flop:dff_block[6].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst3|d_flip_flop:dff_block[7].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|decoder_4_to_16:inst
+w_addr[0] => Decoder0.IN3
+w_addr[1] => Decoder0.IN2
+w_addr[2] => Decoder0.IN1
+w_addr[3] => Decoder0.IN0
+we => we_dec.OUTPUTSELECT
+we => we_dec.OUTPUTSELECT
+we => we_dec.OUTPUTSELECT
+we => we_dec.OUTPUTSELECT
+we => we_dec.OUTPUTSELECT
+we => we_dec.OUTPUTSELECT
+we => we_dec.OUTPUTSELECT
+we => we_dec.OUTPUTSELECT
+we => we_dec.OUTPUTSELECT
+we => we_dec.OUTPUTSELECT
+we => we_dec.OUTPUTSELECT
+we => we_dec.OUTPUTSELECT
+we => we_dec.OUTPUTSELECT
+we => we_dec.OUTPUTSELECT
+we => we_dec.OUTPUTSELECT
+we => we_dec.OUTPUTSELECT
+we_dec[0] <= we_dec.DB_MAX_OUTPUT_PORT_TYPE
+we_dec[1] <= we_dec.DB_MAX_OUTPUT_PORT_TYPE
+we_dec[2] <= we_dec.DB_MAX_OUTPUT_PORT_TYPE
+we_dec[3] <= we_dec.DB_MAX_OUTPUT_PORT_TYPE
+we_dec[4] <= we_dec.DB_MAX_OUTPUT_PORT_TYPE
+we_dec[5] <= we_dec.DB_MAX_OUTPUT_PORT_TYPE
+we_dec[6] <= we_dec.DB_MAX_OUTPUT_PORT_TYPE
+we_dec[7] <= we_dec.DB_MAX_OUTPUT_PORT_TYPE
+we_dec[8] <= we_dec.DB_MAX_OUTPUT_PORT_TYPE
+we_dec[9] <= we_dec.DB_MAX_OUTPUT_PORT_TYPE
+we_dec[10] <= we_dec.DB_MAX_OUTPUT_PORT_TYPE
+we_dec[11] <= we_dec.DB_MAX_OUTPUT_PORT_TYPE
+we_dec[12] <= we_dec.DB_MAX_OUTPUT_PORT_TYPE
+we_dec[13] <= we_dec.DB_MAX_OUTPUT_PORT_TYPE
+we_dec[14] <= we_dec.DB_MAX_OUTPUT_PORT_TYPE
+we_dec[15] <= we_dec.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst4
+clk => clk.IN8
+rst_n => rst_n.IN8
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+d_in[0] => next_d.DATAB
+d_in[1] => next_d.DATAB
+d_in[2] => next_d.DATAB
+d_in[3] => next_d.DATAB
+d_in[4] => next_d.DATAB
+d_in[5] => next_d.DATAB
+d_in[6] => next_d.DATAB
+d_in[7] => next_d.DATAB
+q_out[0] <= d_flip_flop:dff_block[0].dff_inst.q
+q_out[1] <= d_flip_flop:dff_block[1].dff_inst.q
+q_out[2] <= d_flip_flop:dff_block[2].dff_inst.q
+q_out[3] <= d_flip_flop:dff_block[3].dff_inst.q
+q_out[4] <= d_flip_flop:dff_block[4].dff_inst.q
+q_out[5] <= d_flip_flop:dff_block[5].dff_inst.q
+q_out[6] <= d_flip_flop:dff_block[6].dff_inst.q
+q_out[7] <= d_flip_flop:dff_block[7].dff_inst.q
+
+
+|banco_de_registadores_top|register_8bit:inst4|d_flip_flop:dff_block[0].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst4|d_flip_flop:dff_block[1].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst4|d_flip_flop:dff_block[2].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst4|d_flip_flop:dff_block[3].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst4|d_flip_flop:dff_block[4].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst4|d_flip_flop:dff_block[5].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst4|d_flip_flop:dff_block[6].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst4|d_flip_flop:dff_block[7].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst13
+clk => clk.IN8
+rst_n => rst_n.IN8
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+d_in[0] => next_d.DATAB
+d_in[1] => next_d.DATAB
+d_in[2] => next_d.DATAB
+d_in[3] => next_d.DATAB
+d_in[4] => next_d.DATAB
+d_in[5] => next_d.DATAB
+d_in[6] => next_d.DATAB
+d_in[7] => next_d.DATAB
+q_out[0] <= d_flip_flop:dff_block[0].dff_inst.q
+q_out[1] <= d_flip_flop:dff_block[1].dff_inst.q
+q_out[2] <= d_flip_flop:dff_block[2].dff_inst.q
+q_out[3] <= d_flip_flop:dff_block[3].dff_inst.q
+q_out[4] <= d_flip_flop:dff_block[4].dff_inst.q
+q_out[5] <= d_flip_flop:dff_block[5].dff_inst.q
+q_out[6] <= d_flip_flop:dff_block[6].dff_inst.q
+q_out[7] <= d_flip_flop:dff_block[7].dff_inst.q
+
+
+|banco_de_registadores_top|register_8bit:inst13|d_flip_flop:dff_block[0].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst13|d_flip_flop:dff_block[1].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst13|d_flip_flop:dff_block[2].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst13|d_flip_flop:dff_block[3].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst13|d_flip_flop:dff_block[4].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst13|d_flip_flop:dff_block[5].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst13|d_flip_flop:dff_block[6].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst13|d_flip_flop:dff_block[7].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst14
+clk => clk.IN8
+rst_n => rst_n.IN8
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+d_in[0] => next_d.DATAB
+d_in[1] => next_d.DATAB
+d_in[2] => next_d.DATAB
+d_in[3] => next_d.DATAB
+d_in[4] => next_d.DATAB
+d_in[5] => next_d.DATAB
+d_in[6] => next_d.DATAB
+d_in[7] => next_d.DATAB
+q_out[0] <= d_flip_flop:dff_block[0].dff_inst.q
+q_out[1] <= d_flip_flop:dff_block[1].dff_inst.q
+q_out[2] <= d_flip_flop:dff_block[2].dff_inst.q
+q_out[3] <= d_flip_flop:dff_block[3].dff_inst.q
+q_out[4] <= d_flip_flop:dff_block[4].dff_inst.q
+q_out[5] <= d_flip_flop:dff_block[5].dff_inst.q
+q_out[6] <= d_flip_flop:dff_block[6].dff_inst.q
+q_out[7] <= d_flip_flop:dff_block[7].dff_inst.q
+
+
+|banco_de_registadores_top|register_8bit:inst14|d_flip_flop:dff_block[0].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst14|d_flip_flop:dff_block[1].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst14|d_flip_flop:dff_block[2].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst14|d_flip_flop:dff_block[3].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst14|d_flip_flop:dff_block[4].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst14|d_flip_flop:dff_block[5].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst14|d_flip_flop:dff_block[6].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst14|d_flip_flop:dff_block[7].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst15
+clk => clk.IN8
+rst_n => rst_n.IN8
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+d_in[0] => next_d.DATAB
+d_in[1] => next_d.DATAB
+d_in[2] => next_d.DATAB
+d_in[3] => next_d.DATAB
+d_in[4] => next_d.DATAB
+d_in[5] => next_d.DATAB
+d_in[6] => next_d.DATAB
+d_in[7] => next_d.DATAB
+q_out[0] <= d_flip_flop:dff_block[0].dff_inst.q
+q_out[1] <= d_flip_flop:dff_block[1].dff_inst.q
+q_out[2] <= d_flip_flop:dff_block[2].dff_inst.q
+q_out[3] <= d_flip_flop:dff_block[3].dff_inst.q
+q_out[4] <= d_flip_flop:dff_block[4].dff_inst.q
+q_out[5] <= d_flip_flop:dff_block[5].dff_inst.q
+q_out[6] <= d_flip_flop:dff_block[6].dff_inst.q
+q_out[7] <= d_flip_flop:dff_block[7].dff_inst.q
+
+
+|banco_de_registadores_top|register_8bit:inst15|d_flip_flop:dff_block[0].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst15|d_flip_flop:dff_block[1].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst15|d_flip_flop:dff_block[2].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst15|d_flip_flop:dff_block[3].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst15|d_flip_flop:dff_block[4].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst15|d_flip_flop:dff_block[5].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst15|d_flip_flop:dff_block[6].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst15|d_flip_flop:dff_block[7].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst16
+clk => clk.IN8
+rst_n => rst_n.IN8
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+d_in[0] => next_d.DATAB
+d_in[1] => next_d.DATAB
+d_in[2] => next_d.DATAB
+d_in[3] => next_d.DATAB
+d_in[4] => next_d.DATAB
+d_in[5] => next_d.DATAB
+d_in[6] => next_d.DATAB
+d_in[7] => next_d.DATAB
+q_out[0] <= d_flip_flop:dff_block[0].dff_inst.q
+q_out[1] <= d_flip_flop:dff_block[1].dff_inst.q
+q_out[2] <= d_flip_flop:dff_block[2].dff_inst.q
+q_out[3] <= d_flip_flop:dff_block[3].dff_inst.q
+q_out[4] <= d_flip_flop:dff_block[4].dff_inst.q
+q_out[5] <= d_flip_flop:dff_block[5].dff_inst.q
+q_out[6] <= d_flip_flop:dff_block[6].dff_inst.q
+q_out[7] <= d_flip_flop:dff_block[7].dff_inst.q
+
+
+|banco_de_registadores_top|register_8bit:inst16|d_flip_flop:dff_block[0].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst16|d_flip_flop:dff_block[1].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst16|d_flip_flop:dff_block[2].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst16|d_flip_flop:dff_block[3].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst16|d_flip_flop:dff_block[4].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst16|d_flip_flop:dff_block[5].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst16|d_flip_flop:dff_block[6].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst16|d_flip_flop:dff_block[7].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst17
+clk => clk.IN8
+rst_n => rst_n.IN8
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+d_in[0] => next_d.DATAB
+d_in[1] => next_d.DATAB
+d_in[2] => next_d.DATAB
+d_in[3] => next_d.DATAB
+d_in[4] => next_d.DATAB
+d_in[5] => next_d.DATAB
+d_in[6] => next_d.DATAB
+d_in[7] => next_d.DATAB
+q_out[0] <= d_flip_flop:dff_block[0].dff_inst.q
+q_out[1] <= d_flip_flop:dff_block[1].dff_inst.q
+q_out[2] <= d_flip_flop:dff_block[2].dff_inst.q
+q_out[3] <= d_flip_flop:dff_block[3].dff_inst.q
+q_out[4] <= d_flip_flop:dff_block[4].dff_inst.q
+q_out[5] <= d_flip_flop:dff_block[5].dff_inst.q
+q_out[6] <= d_flip_flop:dff_block[6].dff_inst.q
+q_out[7] <= d_flip_flop:dff_block[7].dff_inst.q
+
+
+|banco_de_registadores_top|register_8bit:inst17|d_flip_flop:dff_block[0].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst17|d_flip_flop:dff_block[1].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst17|d_flip_flop:dff_block[2].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst17|d_flip_flop:dff_block[3].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst17|d_flip_flop:dff_block[4].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst17|d_flip_flop:dff_block[5].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst17|d_flip_flop:dff_block[6].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst17|d_flip_flop:dff_block[7].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst18
+clk => clk.IN8
+rst_n => rst_n.IN8
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+d_in[0] => next_d.DATAB
+d_in[1] => next_d.DATAB
+d_in[2] => next_d.DATAB
+d_in[3] => next_d.DATAB
+d_in[4] => next_d.DATAB
+d_in[5] => next_d.DATAB
+d_in[6] => next_d.DATAB
+d_in[7] => next_d.DATAB
+q_out[0] <= d_flip_flop:dff_block[0].dff_inst.q
+q_out[1] <= d_flip_flop:dff_block[1].dff_inst.q
+q_out[2] <= d_flip_flop:dff_block[2].dff_inst.q
+q_out[3] <= d_flip_flop:dff_block[3].dff_inst.q
+q_out[4] <= d_flip_flop:dff_block[4].dff_inst.q
+q_out[5] <= d_flip_flop:dff_block[5].dff_inst.q
+q_out[6] <= d_flip_flop:dff_block[6].dff_inst.q
+q_out[7] <= d_flip_flop:dff_block[7].dff_inst.q
+
+
+|banco_de_registadores_top|register_8bit:inst18|d_flip_flop:dff_block[0].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst18|d_flip_flop:dff_block[1].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst18|d_flip_flop:dff_block[2].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst18|d_flip_flop:dff_block[3].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst18|d_flip_flop:dff_block[4].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst18|d_flip_flop:dff_block[5].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst18|d_flip_flop:dff_block[6].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst18|d_flip_flop:dff_block[7].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst5
+clk => clk.IN8
+rst_n => rst_n.IN8
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+d_in[0] => next_d.DATAB
+d_in[1] => next_d.DATAB
+d_in[2] => next_d.DATAB
+d_in[3] => next_d.DATAB
+d_in[4] => next_d.DATAB
+d_in[5] => next_d.DATAB
+d_in[6] => next_d.DATAB
+d_in[7] => next_d.DATAB
+q_out[0] <= d_flip_flop:dff_block[0].dff_inst.q
+q_out[1] <= d_flip_flop:dff_block[1].dff_inst.q
+q_out[2] <= d_flip_flop:dff_block[2].dff_inst.q
+q_out[3] <= d_flip_flop:dff_block[3].dff_inst.q
+q_out[4] <= d_flip_flop:dff_block[4].dff_inst.q
+q_out[5] <= d_flip_flop:dff_block[5].dff_inst.q
+q_out[6] <= d_flip_flop:dff_block[6].dff_inst.q
+q_out[7] <= d_flip_flop:dff_block[7].dff_inst.q
+
+
+|banco_de_registadores_top|register_8bit:inst5|d_flip_flop:dff_block[0].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst5|d_flip_flop:dff_block[1].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst5|d_flip_flop:dff_block[2].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst5|d_flip_flop:dff_block[3].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst5|d_flip_flop:dff_block[4].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst5|d_flip_flop:dff_block[5].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst5|d_flip_flop:dff_block[6].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst5|d_flip_flop:dff_block[7].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst6
+clk => clk.IN8
+rst_n => rst_n.IN8
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+d_in[0] => next_d.DATAB
+d_in[1] => next_d.DATAB
+d_in[2] => next_d.DATAB
+d_in[3] => next_d.DATAB
+d_in[4] => next_d.DATAB
+d_in[5] => next_d.DATAB
+d_in[6] => next_d.DATAB
+d_in[7] => next_d.DATAB
+q_out[0] <= d_flip_flop:dff_block[0].dff_inst.q
+q_out[1] <= d_flip_flop:dff_block[1].dff_inst.q
+q_out[2] <= d_flip_flop:dff_block[2].dff_inst.q
+q_out[3] <= d_flip_flop:dff_block[3].dff_inst.q
+q_out[4] <= d_flip_flop:dff_block[4].dff_inst.q
+q_out[5] <= d_flip_flop:dff_block[5].dff_inst.q
+q_out[6] <= d_flip_flop:dff_block[6].dff_inst.q
+q_out[7] <= d_flip_flop:dff_block[7].dff_inst.q
+
+
+|banco_de_registadores_top|register_8bit:inst6|d_flip_flop:dff_block[0].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst6|d_flip_flop:dff_block[1].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst6|d_flip_flop:dff_block[2].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst6|d_flip_flop:dff_block[3].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst6|d_flip_flop:dff_block[4].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst6|d_flip_flop:dff_block[5].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst6|d_flip_flop:dff_block[6].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst6|d_flip_flop:dff_block[7].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst7
+clk => clk.IN8
+rst_n => rst_n.IN8
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+d_in[0] => next_d.DATAB
+d_in[1] => next_d.DATAB
+d_in[2] => next_d.DATAB
+d_in[3] => next_d.DATAB
+d_in[4] => next_d.DATAB
+d_in[5] => next_d.DATAB
+d_in[6] => next_d.DATAB
+d_in[7] => next_d.DATAB
+q_out[0] <= d_flip_flop:dff_block[0].dff_inst.q
+q_out[1] <= d_flip_flop:dff_block[1].dff_inst.q
+q_out[2] <= d_flip_flop:dff_block[2].dff_inst.q
+q_out[3] <= d_flip_flop:dff_block[3].dff_inst.q
+q_out[4] <= d_flip_flop:dff_block[4].dff_inst.q
+q_out[5] <= d_flip_flop:dff_block[5].dff_inst.q
+q_out[6] <= d_flip_flop:dff_block[6].dff_inst.q
+q_out[7] <= d_flip_flop:dff_block[7].dff_inst.q
+
+
+|banco_de_registadores_top|register_8bit:inst7|d_flip_flop:dff_block[0].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst7|d_flip_flop:dff_block[1].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst7|d_flip_flop:dff_block[2].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst7|d_flip_flop:dff_block[3].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst7|d_flip_flop:dff_block[4].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst7|d_flip_flop:dff_block[5].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst7|d_flip_flop:dff_block[6].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst7|d_flip_flop:dff_block[7].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst8
+clk => clk.IN8
+rst_n => rst_n.IN8
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+d_in[0] => next_d.DATAB
+d_in[1] => next_d.DATAB
+d_in[2] => next_d.DATAB
+d_in[3] => next_d.DATAB
+d_in[4] => next_d.DATAB
+d_in[5] => next_d.DATAB
+d_in[6] => next_d.DATAB
+d_in[7] => next_d.DATAB
+q_out[0] <= d_flip_flop:dff_block[0].dff_inst.q
+q_out[1] <= d_flip_flop:dff_block[1].dff_inst.q
+q_out[2] <= d_flip_flop:dff_block[2].dff_inst.q
+q_out[3] <= d_flip_flop:dff_block[3].dff_inst.q
+q_out[4] <= d_flip_flop:dff_block[4].dff_inst.q
+q_out[5] <= d_flip_flop:dff_block[5].dff_inst.q
+q_out[6] <= d_flip_flop:dff_block[6].dff_inst.q
+q_out[7] <= d_flip_flop:dff_block[7].dff_inst.q
+
+
+|banco_de_registadores_top|register_8bit:inst8|d_flip_flop:dff_block[0].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst8|d_flip_flop:dff_block[1].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst8|d_flip_flop:dff_block[2].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst8|d_flip_flop:dff_block[3].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst8|d_flip_flop:dff_block[4].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst8|d_flip_flop:dff_block[5].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst8|d_flip_flop:dff_block[6].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst8|d_flip_flop:dff_block[7].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst9
+clk => clk.IN8
+rst_n => rst_n.IN8
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+d_in[0] => next_d.DATAB
+d_in[1] => next_d.DATAB
+d_in[2] => next_d.DATAB
+d_in[3] => next_d.DATAB
+d_in[4] => next_d.DATAB
+d_in[5] => next_d.DATAB
+d_in[6] => next_d.DATAB
+d_in[7] => next_d.DATAB
+q_out[0] <= d_flip_flop:dff_block[0].dff_inst.q
+q_out[1] <= d_flip_flop:dff_block[1].dff_inst.q
+q_out[2] <= d_flip_flop:dff_block[2].dff_inst.q
+q_out[3] <= d_flip_flop:dff_block[3].dff_inst.q
+q_out[4] <= d_flip_flop:dff_block[4].dff_inst.q
+q_out[5] <= d_flip_flop:dff_block[5].dff_inst.q
+q_out[6] <= d_flip_flop:dff_block[6].dff_inst.q
+q_out[7] <= d_flip_flop:dff_block[7].dff_inst.q
+
+
+|banco_de_registadores_top|register_8bit:inst9|d_flip_flop:dff_block[0].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst9|d_flip_flop:dff_block[1].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst9|d_flip_flop:dff_block[2].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst9|d_flip_flop:dff_block[3].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst9|d_flip_flop:dff_block[4].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst9|d_flip_flop:dff_block[5].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst9|d_flip_flop:dff_block[6].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst9|d_flip_flop:dff_block[7].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:8_registrador
+clk => clk.IN8
+rst_n => rst_n.IN8
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+d_in[0] => next_d.DATAB
+d_in[1] => next_d.DATAB
+d_in[2] => next_d.DATAB
+d_in[3] => next_d.DATAB
+d_in[4] => next_d.DATAB
+d_in[5] => next_d.DATAB
+d_in[6] => next_d.DATAB
+d_in[7] => next_d.DATAB
+q_out[0] <= d_flip_flop:dff_block[0].dff_inst.q
+q_out[1] <= d_flip_flop:dff_block[1].dff_inst.q
+q_out[2] <= d_flip_flop:dff_block[2].dff_inst.q
+q_out[3] <= d_flip_flop:dff_block[3].dff_inst.q
+q_out[4] <= d_flip_flop:dff_block[4].dff_inst.q
+q_out[5] <= d_flip_flop:dff_block[5].dff_inst.q
+q_out[6] <= d_flip_flop:dff_block[6].dff_inst.q
+q_out[7] <= d_flip_flop:dff_block[7].dff_inst.q
+
+
+|banco_de_registadores_top|register_8bit:8_registrador|d_flip_flop:dff_block[0].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:8_registrador|d_flip_flop:dff_block[1].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:8_registrador|d_flip_flop:dff_block[2].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:8_registrador|d_flip_flop:dff_block[3].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:8_registrador|d_flip_flop:dff_block[4].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:8_registrador|d_flip_flop:dff_block[5].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:8_registrador|d_flip_flop:dff_block[6].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:8_registrador|d_flip_flop:dff_block[7].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst11
+clk => clk.IN8
+rst_n => rst_n.IN8
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+d_in[0] => next_d.DATAB
+d_in[1] => next_d.DATAB
+d_in[2] => next_d.DATAB
+d_in[3] => next_d.DATAB
+d_in[4] => next_d.DATAB
+d_in[5] => next_d.DATAB
+d_in[6] => next_d.DATAB
+d_in[7] => next_d.DATAB
+q_out[0] <= d_flip_flop:dff_block[0].dff_inst.q
+q_out[1] <= d_flip_flop:dff_block[1].dff_inst.q
+q_out[2] <= d_flip_flop:dff_block[2].dff_inst.q
+q_out[3] <= d_flip_flop:dff_block[3].dff_inst.q
+q_out[4] <= d_flip_flop:dff_block[4].dff_inst.q
+q_out[5] <= d_flip_flop:dff_block[5].dff_inst.q
+q_out[6] <= d_flip_flop:dff_block[6].dff_inst.q
+q_out[7] <= d_flip_flop:dff_block[7].dff_inst.q
+
+
+|banco_de_registadores_top|register_8bit:inst11|d_flip_flop:dff_block[0].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst11|d_flip_flop:dff_block[1].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst11|d_flip_flop:dff_block[2].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst11|d_flip_flop:dff_block[3].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst11|d_flip_flop:dff_block[4].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst11|d_flip_flop:dff_block[5].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst11|d_flip_flop:dff_block[6].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst11|d_flip_flop:dff_block[7].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst12
+clk => clk.IN8
+rst_n => rst_n.IN8
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+we => next_d.OUTPUTSELECT
+d_in[0] => next_d.DATAB
+d_in[1] => next_d.DATAB
+d_in[2] => next_d.DATAB
+d_in[3] => next_d.DATAB
+d_in[4] => next_d.DATAB
+d_in[5] => next_d.DATAB
+d_in[6] => next_d.DATAB
+d_in[7] => next_d.DATAB
+q_out[0] <= d_flip_flop:dff_block[0].dff_inst.q
+q_out[1] <= d_flip_flop:dff_block[1].dff_inst.q
+q_out[2] <= d_flip_flop:dff_block[2].dff_inst.q
+q_out[3] <= d_flip_flop:dff_block[3].dff_inst.q
+q_out[4] <= d_flip_flop:dff_block[4].dff_inst.q
+q_out[5] <= d_flip_flop:dff_block[5].dff_inst.q
+q_out[6] <= d_flip_flop:dff_block[6].dff_inst.q
+q_out[7] <= d_flip_flop:dff_block[7].dff_inst.q
+
+
+|banco_de_registadores_top|register_8bit:inst12|d_flip_flop:dff_block[0].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst12|d_flip_flop:dff_block[1].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst12|d_flip_flop:dff_block[2].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst12|d_flip_flop:dff_block[3].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst12|d_flip_flop:dff_block[4].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst12|d_flip_flop:dff_block[5].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst12|d_flip_flop:dff_block[6].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|register_8bit:inst12|d_flip_flop:dff_block[7].dff_inst
+clk => q~reg0.CLK
+rst_n => q~reg0.ACLR
+d => q~reg0.DATAIN
+q <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+q_bar <= q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|banco_de_registadores_top|mux_16to1_8bit:Porta_B_Leitura
+in0[0] => Mux7.IN0
+in0[1] => Mux6.IN0
+in0[2] => Mux5.IN0
+in0[3] => Mux4.IN0
+in0[4] => Mux3.IN0
+in0[5] => Mux2.IN0
+in0[6] => Mux1.IN0
+in0[7] => Mux0.IN0
+in1[0] => Mux7.IN1
+in1[1] => Mux6.IN1
+in1[2] => Mux5.IN1
+in1[3] => Mux4.IN1
+in1[4] => Mux3.IN1
+in1[5] => Mux2.IN1
+in1[6] => Mux1.IN1
+in1[7] => Mux0.IN1
+in2[0] => Mux7.IN2
+in2[1] => Mux6.IN2
+in2[2] => Mux5.IN2
+in2[3] => Mux4.IN2
+in2[4] => Mux3.IN2
+in2[5] => Mux2.IN2
+in2[6] => Mux1.IN2
+in2[7] => Mux0.IN2
+in3[0] => Mux7.IN3
+in3[1] => Mux6.IN3
+in3[2] => Mux5.IN3
+in3[3] => Mux4.IN3
+in3[4] => Mux3.IN3
+in3[5] => Mux2.IN3
+in3[6] => Mux1.IN3
+in3[7] => Mux0.IN3
+in4[0] => Mux7.IN4
+in4[1] => Mux6.IN4
+in4[2] => Mux5.IN4
+in4[3] => Mux4.IN4
+in4[4] => Mux3.IN4
+in4[5] => Mux2.IN4
+in4[6] => Mux1.IN4
+in4[7] => Mux0.IN4
+in5[0] => Mux7.IN5
+in5[1] => Mux6.IN5
+in5[2] => Mux5.IN5
+in5[3] => Mux4.IN5
+in5[4] => Mux3.IN5
+in5[5] => Mux2.IN5
+in5[6] => Mux1.IN5
+in5[7] => Mux0.IN5
+in6[0] => Mux7.IN6
+in6[1] => Mux6.IN6
+in6[2] => Mux5.IN6
+in6[3] => Mux4.IN6
+in6[4] => Mux3.IN6
+in6[5] => Mux2.IN6
+in6[6] => Mux1.IN6
+in6[7] => Mux0.IN6
+in7[0] => Mux7.IN7
+in7[1] => Mux6.IN7
+in7[2] => Mux5.IN7
+in7[3] => Mux4.IN7
+in7[4] => Mux3.IN7
+in7[5] => Mux2.IN7
+in7[6] => Mux1.IN7
+in7[7] => Mux0.IN7
+in8[0] => Mux7.IN8
+in8[1] => Mux6.IN8
+in8[2] => Mux5.IN8
+in8[3] => Mux4.IN8
+in8[4] => Mux3.IN8
+in8[5] => Mux2.IN8
+in8[6] => Mux1.IN8
+in8[7] => Mux0.IN8
+in9[0] => Mux7.IN9
+in9[1] => Mux6.IN9
+in9[2] => Mux5.IN9
+in9[3] => Mux4.IN9
+in9[4] => Mux3.IN9
+in9[5] => Mux2.IN9
+in9[6] => Mux1.IN9
+in9[7] => Mux0.IN9
+in10[0] => Mux7.IN10
+in10[1] => Mux6.IN10
+in10[2] => Mux5.IN10
+in10[3] => Mux4.IN10
+in10[4] => Mux3.IN10
+in10[5] => Mux2.IN10
+in10[6] => Mux1.IN10
+in10[7] => Mux0.IN10
+in11[0] => Mux7.IN11
+in11[1] => Mux6.IN11
+in11[2] => Mux5.IN11
+in11[3] => Mux4.IN11
+in11[4] => Mux3.IN11
+in11[5] => Mux2.IN11
+in11[6] => Mux1.IN11
+in11[7] => Mux0.IN11
+in12[0] => Mux7.IN12
+in12[1] => Mux6.IN12
+in12[2] => Mux5.IN12
+in12[3] => Mux4.IN12
+in12[4] => Mux3.IN12
+in12[5] => Mux2.IN12
+in12[6] => Mux1.IN12
+in12[7] => Mux0.IN12
+in13[0] => Mux7.IN13
+in13[1] => Mux6.IN13
+in13[2] => Mux5.IN13
+in13[3] => Mux4.IN13
+in13[4] => Mux3.IN13
+in13[5] => Mux2.IN13
+in13[6] => Mux1.IN13
+in13[7] => Mux0.IN13
+in14[0] => Mux7.IN14
+in14[1] => Mux6.IN14
+in14[2] => Mux5.IN14
+in14[3] => Mux4.IN14
+in14[4] => Mux3.IN14
+in14[5] => Mux2.IN14
+in14[6] => Mux1.IN14
+in14[7] => Mux0.IN14
+in15[0] => Mux7.IN15
+in15[1] => Mux6.IN15
+in15[2] => Mux5.IN15
+in15[3] => Mux4.IN15
+in15[4] => Mux3.IN15
+in15[5] => Mux2.IN15
+in15[6] => Mux1.IN15
+in15[7] => Mux0.IN15
+sel[0] => Mux0.IN19
+sel[0] => Mux1.IN19
+sel[0] => Mux2.IN19
+sel[0] => Mux3.IN19
+sel[0] => Mux4.IN19
+sel[0] => Mux5.IN19
+sel[0] => Mux6.IN19
+sel[0] => Mux7.IN19
+sel[1] => Mux0.IN18
+sel[1] => Mux1.IN18
+sel[1] => Mux2.IN18
+sel[1] => Mux3.IN18
+sel[1] => Mux4.IN18
+sel[1] => Mux5.IN18
+sel[1] => Mux6.IN18
+sel[1] => Mux7.IN18
+sel[2] => Mux0.IN17
+sel[2] => Mux1.IN17
+sel[2] => Mux2.IN17
+sel[2] => Mux3.IN17
+sel[2] => Mux4.IN17
+sel[2] => Mux5.IN17
+sel[2] => Mux6.IN17
+sel[2] => Mux7.IN17
+sel[3] => Mux0.IN16
+sel[3] => Mux1.IN16
+sel[3] => Mux2.IN16
+sel[3] => Mux3.IN16
+sel[3] => Mux4.IN16
+sel[3] => Mux5.IN16
+sel[3] => Mux6.IN16
+sel[3] => Mux7.IN16
+out[0] <= Mux7.DB_MAX_OUTPUT_PORT_TYPE
+out[1] <= Mux6.DB_MAX_OUTPUT_PORT_TYPE
+out[2] <= Mux5.DB_MAX_OUTPUT_PORT_TYPE
+out[3] <= Mux4.DB_MAX_OUTPUT_PORT_TYPE
+out[4] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+out[5] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+out[6] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+out[7] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
 
 

@@ -1,0 +1,179 @@
+// =============================================================================
+// Projeto CI Amazônia - Atividade de Digitais
+// Módulo: Testbench Autoverificável para o Banco de Registradores 16x8 (Single-Port)
+// =============================================================================
+
+`timescale 1ns/1ps
+
+module tb_register_file;
+
+    // Sinais do Testbench
+    logic       clk;
+    logic       rst_n;
+    logic       we;
+    logic [3:0] w_addr;
+    logic [7:0] w_data;
+    logic [3:0] r_addr;
+    logic [7:0] r_data;
+
+    // Instanciação do Dispositivo sob Teste (DUT)
+    register_file dut (
+        .clk(clk),
+        .rst_n(rst_n),
+        .we(we),
+        .w_addr(w_addr),
+        .w_data(w_data),
+        .r_addr(r_addr),
+        .r_data(r_data)
+    );
+
+    // Geração de Clock (Período de 10ns -> Frequência de 100MHz)
+    always #5 clk = ~clk;
+
+    // Contador de Erros
+    int error_count = 0;
+
+    // Macro auxiliar para verificação (Self-Checking)
+    task assert_equal(input logic [7:0] actual, input logic [7:0] expected, input string msg);
+        if (actual !== expected) begin
+            $display("[ERRO] %s | Obtido: 8'h%h | Esperado: 8'h%h em %t", msg, actual, expected, $time);
+            error_count++;
+        end else begin
+            $display("[OK] %s | Valor: 8'h%h em %t", msg, actual, $time);
+        end
+    endtask
+
+    // Processo Principal de Estímulos
+    initial begin
+        // Inicialização de Sinais
+        clk    = 1'b0;
+        rst_n  = 1'b1;
+        we     = 1'b0;
+        w_addr = 4'h0;
+        w_data = 8'h00;
+        r_addr = 4'h0;
+
+        $display("=========================================================");
+        $display("Iniciando Simulação do Banco de Registradores 16x8 síncrono");
+        $display("=========================================================");
+
+        // ---------------------------------------------------------------------
+        // PASSO 1: Testar o Reset Assíncrono Ativo-Baixo
+        // ---------------------------------------------------------------------
+        #2;
+        rst_n = 1'b0; // Ativa reset fora da borda de clock
+        #10;
+        rst_n = 1'b1; // Desativa reset
+        
+        // Como o r_data é registrado, após desativar o reset e na primeira borda
+        // de subida, o dado de saída deve ser amostrado como 8'h00 (valor default do endereço 0)
+        @(posedge clk);
+        #1; // Espera um tempo infinitesimal pós-borda
+        assert_equal(r_data, 8'h00, "Reset síncrono da saída r_data");
+
+        // ---------------------------------------------------------------------
+        // PASSO 2: Escrita Síncrona de Dados em Lote
+        // ---------------------------------------------------------------------
+        $display("\n--- Iniciando Escrita síncrona nos Registradores ---");
+        
+        // Escreve 8'h55 no Registrador 0
+        @(negedge clk);
+        we     = 1'b1;
+        w_addr = 4'd0;
+        w_data = 8'h55;
+
+        // Escreve 8'hAA no Registrador 5
+        @(negedge clk);
+        w_addr = 4'd5;
+        w_data = 8'hAA;
+
+        // Escreve 8'hFF no Registrador 15
+        @(negedge clk);
+        w_addr = 4'd15;
+        w_data = 8'hFF;
+
+        // Desativa a escrita
+        @(negedge clk);
+        we     = 1'b0;
+        w_addr = 4'd0;
+        w_data = 8'h00;
+
+        // ---------------------------------------------------------------------
+        // PASSO 3: Testar Leitura Síncrona Registrada (Opção B - Latência 1 Ciclo)
+        // ---------------------------------------------------------------------
+        $display("\n--- Iniciando Leituras (Verificando latência de 1 ciclo) ---");
+
+        // Solicitamos a leitura do Reg 0
+        @(negedge clk);
+        r_addr = 4'd0; 
+        
+        // Na borda de subida seguinte, o circuito seleciona o Reg 0 e atualiza a saída r_data
+        @(posedge clk);
+        #1;
+        assert_equal(r_data, 8'h55, "Leitura registrada do Reg 0 (Espera-se 8'h55)");
+
+        // Solicitamos a leitura do Reg 5
+        @(negedge clk);
+        r_addr = 4'd5;
+
+        @(posedge clk);
+        #1;
+        assert_equal(r_data, 8'hAA, "Leitura registrada do Reg 5 (Espera-se 8'hAA)");
+
+        // Solicitamos a leitura do Reg 15
+        @(negedge clk);
+        r_addr = 4'd15;
+
+        @(posedge clk);
+        #1;
+        assert_equal(r_data, 8'hFF, "Leitura registrada do Reg 15 (Espera-se 8'hFF)");
+
+        // Solicitamos a leitura de um registrador que não escrevemos (Reg 8 - deve estar zerado)
+        @(negedge clk);
+        r_addr = 4'd8;
+
+        @(posedge clk);
+        #1;
+        assert_equal(r_data, 8'h00, "Leitura registrada de Registrador Vazio Reg 8 (Espera-se 8'h00)");
+
+        // ---------------------------------------------------------------------
+        // PASSO 4: Testar Retenção de Dados (Escrita com Write Enable desativado)
+        // ---------------------------------------------------------------------
+        $display("\n--- Testando Retenção de Dados ---");
+        
+        @(negedge clk);
+        we     = 1'b0; // Garantindo que está desligado
+        w_addr = 4'd5;
+        w_data = 8'h33; // Tenta sobrescrever o Reg 5 que tem 8'hAA
+
+        @(posedge clk);
+        // Agora solicita a leitura do Reg 5 novamente
+        @(negedge clk);
+        r_addr = 4'd5;
+
+        @(posedge clk);
+        #1;
+        assert_equal(r_data, 8'hAA, "Verificação de retenção no Reg 5 (Não deve mudar de 8'hAA)");
+
+        // ---------------------------------------------------------------------
+        // RELATÓRIO FINAL
+        // ---------------------------------------------------------------------
+        $display("\n=========================================================");
+        if (error_count == 0) begin
+            $display(">> RESULTADO DO TESTBENCH: PASS <<");
+            $display("Parabéns! Todas as checagens foram concluídas com sucesso.");
+        end else begin
+            $display(">> RESULTADO DO TESTBENCH: FAIL <<");
+            $display("Atenção: %d erros foram encontrados na simulação.", error_count);
+        end
+        $display("=========================================================");
+
+        // Gravação do Arquivo de Ondas para o GTKWave
+        $dumpfile("ondas_regfile.vcd");
+        $dumpvars(0, tb_register_file);
+
+        #20;
+        $stop;
+    end
+
+endmodule
