@@ -1,0 +1,412 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do banco_de_registadores_top_run_msim_rtl_verilog.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vlog -sv -work work +incdir+C:/Users/Manu/Downloads/SpaceFibre-novo {C:/Users/Manu/Downloads/SpaceFibre-novo/register_8bit.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register_8bit
+# 
+# Top level modules:
+# 	register_8bit
+# vlog -sv -work work +incdir+C:/Users/Manu/Downloads/SpaceFibre-novo {C:/Users/Manu/Downloads/SpaceFibre-novo/mux_16to1_8bit.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_16to1_8bit
+# 
+# Top level modules:
+# 	mux_16to1_8bit
+# vlog -sv -work work +incdir+C:/Users/Manu/Downloads/SpaceFibre-novo {C:/Users/Manu/Downloads/SpaceFibre-novo/decoder_4_to_16.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module decoder_4_to_16
+# 
+# Top level modules:
+# 	decoder_4_to_16
+# vlog -sv -work work +incdir+C:/Users/Manu/Downloads/SpaceFibre-novo {C:/Users/Manu/Downloads/SpaceFibre-novo/d_flip_flop.sv}
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module d_flip_flop
+# 
+# Top level modules:
+# 	d_flip_flop
+# 
+cd {C:/Users/Manu/Downloads/SpaceFibre-novo}
+# reading C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini
+pwd
+# C:/Users/Manu/Downloads/SpaceFibre-novo
+vlib work
+vmap work work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+vlog -sv d_flip_flop.sv
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module d_flip_flop
+# 
+# Top level modules:
+# 	d_flip_flop
+vlog -sv register_8bit.sv
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register_8bit
+# 
+# Top level modules:
+# 	register_8bit
+vlog -sv decoder_4_to_16.sv
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module decoder_4_to_16
+# 
+# Top level modules:
+# 	decoder_4_to_16
+vlog -sv mux_16to1_8bit.sv
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_16to1_8bit
+# 
+# Top level modules:
+# 	mux_16to1_8bit
+vlog -sv tb_banco_registradores.sv
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_banco_registradores
+# 
+# Top level modules:
+# 	tb_banco_registradores
+vsim work.tb_banco_registradores
+# vsim work.tb_banco_registradores 
+# Loading sv_std.std
+# Loading work.tb_banco_registradores
+# ** Error: (vsim-3033) tb_banco_registradores.sv(46): Instantiation of 'banco_de_registadores_top' failed. The design unit was not found.
+# 
+#         Region: /tb_banco_registradores
+#         Searched libraries:
+#             C:/Users/Manu/Downloads/SpaceFibre-novo/work
+# Error loading design
+vlog -sv banco_de_registadores_top.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module banco_de_registadores_top
+# 
+# Top level modules:
+# 	banco_de_registadores_top
+vlog -sv tb_banco_registradores.sv
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_banco_registradores
+# 
+# Top level modules:
+# 	tb_banco_registradores
+vsim work.tb_banco_registradores
+# vsim work.tb_banco_registradores 
+# Loading sv_std.std
+# Loading work.tb_banco_registradores
+# Loading work.banco_de_registadores_top
+# Loading work.register_8bit
+# Loading work.decoder_4_to_16
+# Loading work.mux_16to1_8bit
+# Loading work.d_flip_flop
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in17' not found in the connected module (2nd connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in16' not found in the connected module (3rd connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in107' not found in the connected module (10th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in106' not found in the connected module (11th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in105' not found in the connected module (12th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in104' not found in the connected module (13th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in103' not found in the connected module (14th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in102' not found in the connected module (15th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in101' not found in the connected module (16th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in100' not found in the connected module (17th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in117' not found in the connected module (18th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in116' not found in the connected module (19th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in115' not found in the connected module (20th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in114' not found in the connected module (21st connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in113' not found in the connected module (22nd connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in112' not found in the connected module (23rd connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in111' not found in the connected module (24th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in110' not found in the connected module (25th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in127' not found in the connected module (26th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in126' not found in the connected module (27th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in125' not found in the connected module (28th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in124' not found in the connected module (29th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in123' not found in the connected module (30th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in122' not found in the connected module (31st connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in121' not found in the connected module (32nd connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in120' not found in the connected module (33rd connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in137' not found in the connected module (34th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in136' not found in the connected module (35th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in135' not found in the connected module (36th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in134' not found in the connected module (37th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in133' not found in the connected module (38th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in132' not found in the connected module (39th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in131' not found in the connected module (40th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in130' not found in the connected module (41st connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in147' not found in the connected module (42nd connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in146' not found in the connected module (43rd connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in145' not found in the connected module (44th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in144' not found in the connected module (45th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in143' not found in the connected module (46th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in142' not found in the connected module (47th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in141' not found in the connected module (48th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in140' not found in the connected module (49th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in157' not found in the connected module (50th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in156' not found in the connected module (51st connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in155' not found in the connected module (52nd connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in154' not found in the connected module (53rd connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in153' not found in the connected module (54th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in152' not found in the connected module (55th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in151' not found in the connected module (56th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Error: (vsim-3389) banco_de_registadores_top.v(316): Port 'in150' not found in the connected module (57th connection).
+# 
+#         Region: /tb_banco_registradores/dut/b2v_Porta_A_Leitura
+# ** Fatal: (vsim-3365) banco_de_registadores_top.v(316): Too many port connections. Expected 18, found 67.
+#    Time: 0 ps  Iteration: 0  Instance: /tb_banco_registradores/dut/b2v_Porta_A_Leitura File: mux_16to1_8bit.sv
+# FATAL ERROR while loading design
+# Error loading design
+cd {C:/Users/Manu/Downloads/SpaceFibre-novo}
+# reading modelsim.ini
+vdel -lib work -all
+
+vlib work
+vmap work work
+# Modifying modelsim.ini
+vlog -sv d_flip_flop.sv
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module d_flip_flop
+# 
+# Top level modules:
+# 	d_flip_flop
+vlog -sv register_8bit.sv
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module register_8bit
+# 
+# Top level modules:
+# 	register_8bit
+vlog -sv decoder_4_to_16.sv
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module decoder_4_to_16
+# 
+# Top level modules:
+# 	decoder_4_to_16
+vlog -sv mux_16to1_8bit.sv
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module mux_16to1_8bit
+# 
+# Top level modules:
+# 	mux_16to1_8bit
+vlog banco_de_registadores_top.v
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module banco_de_registadores_top
+# 
+# Top level modules:
+# 	banco_de_registadores_top
+vlog -sv tb_banco_registradores.sv
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module tb_banco_registradores
+# 
+# Top level modules:
+# 	tb_banco_registradores
+vsim work.tb_banco_registradores
+# vsim work.tb_banco_registradores 
+# Loading sv_std.std
+# Loading work.tb_banco_registradores
+# Loading work.banco_de_registadores_top
+# Loading work.register_8bit
+# Loading work.decoder_4_to_16
+# Loading work.mux_16to1_8bit
+# Loading work.d_flip_flop
+run -all
+# ==========================================
+# TESTE 1 - Escrita no registrador 3
+# ==========================================
+# Reg3 = aa
+# TESTE 1: PASSOU
+# 
+# ==========================================
+# TESTE 2 - Escrita no registrador 8
+# ==========================================
+# Reg8 = 55
+# TESTE 2: PASSOU
+# 
+# ==========================================
+# TESTE 3 - Leitura simultanea
+# ==========================================
+# Porta A - Reg3 = aa
+# Porta B - Reg8 = 55
+# TESTE 3: PASSOU
+# 
+# ==========================================
+# TESTE 4 - Sobrescrita do registrador 3
+# ==========================================
+# Reg3 = f0
+# TESTE 4: PASSOU
+# 
+# ==========================================
+# TESTE 5 - Decoder
+# ==========================================
+# w_addr =  5
+# we_dec = 0000000000100000
+# TESTE 5: PASSOU
+# 
+# ==========================================
+# FIM DA SIMULACAO
+# ==========================================
+# ** Note: $finish    : tb_banco_registradores.sv(239)
+#    Time: 58 ns  Iteration: 0  Instance: /tb_banco_registradores
+# 1
+# Break in Module tb_banco_registradores at tb_banco_registradores.sv line 239
+add wave sim:/tb_banco_registradores/clk
+add wave sim:/tb_banco_registradores/rst_n
+add wave sim:/tb_banco_registradores/we
+add wave sim:/tb_banco_registradores/w_addr
+add wave sim:/tb_banco_registradores/w_data
+add wave sim:/tb_banco_registradores/r_addr_a
+add wave sim:/tb_banco_registradores/r_addr_b
+add wave sim:/tb_banco_registradores/r_data_a
+add wave sim:/tb_banco_registradores/r_data_b
+add wave sim:/tb_banco_registradores/we_dec
+restart -f
+# Loading sv_std.std
+# Loading work.tb_banco_registradores
+# Loading work.register_8bit
+# Loading work.decoder_4_to_16
+# Loading work.mux_16to1_8bit
+# Loading work.d_flip_flop
+run -all
+# ==========================================
+# TESTE 1 - Escrita no registrador 3
+# ==========================================
+# Reg3 = aa
+# TESTE 1: PASSOU
+# 
+# ==========================================
+# TESTE 2 - Escrita no registrador 8
+# ==========================================
+# Reg8 = 55
+# TESTE 2: PASSOU
+# 
+# ==========================================
+# TESTE 3 - Leitura simultanea
+# ==========================================
+# Porta A - Reg3 = aa
+# Porta B - Reg8 = 55
+# TESTE 3: PASSOU
+# 
+# ==========================================
+# TESTE 4 - Sobrescrita do registrador 3
+# ==========================================
+# Reg3 = f0
+# TESTE 4: PASSOU
+# 
+# ==========================================
+# TESTE 5 - Decoder
+# ==========================================
+# w_addr =  5
+# we_dec = 0000000000100000
+# TESTE 5: PASSOU
+# 
+# ==========================================
+# FIM DA SIMULACAO
+# ==========================================
+# ** Note: $finish    : tb_banco_registradores.sv(239)
+#    Time: 58 ns  Iteration: 0  Instance: /tb_banco_registradores
+# 1
+# Break in Module tb_banco_registradores at tb_banco_registradores.sv line 239
+quit
