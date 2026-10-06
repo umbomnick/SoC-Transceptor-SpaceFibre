@@ -1,0 +1,100 @@
+|encoder_8b10b
+clk => dout[0]~reg0.CLK
+clk => dout[1]~reg0.CLK
+clk => dout[2]~reg0.CLK
+clk => dout[3]~reg0.CLK
+clk => dout[4]~reg0.CLK
+clk => dout[5]~reg0.CLK
+clk => dout[6]~reg0.CLK
+clk => dout[7]~reg0.CLK
+clk => dout[8]~reg0.CLK
+clk => dout[9]~reg0.CLK
+clk => rd_reg.CLK
+rst_n => dout[0]~reg0.ACLR
+rst_n => dout[1]~reg0.ACLR
+rst_n => dout[2]~reg0.ACLR
+rst_n => dout[3]~reg0.ACLR
+rst_n => dout[4]~reg0.ACLR
+rst_n => dout[5]~reg0.ACLR
+rst_n => dout[6]~reg0.ACLR
+rst_n => dout[7]~reg0.ACLR
+rst_n => dout[8]~reg0.ACLR
+rst_n => dout[9]~reg0.ACLR
+rst_n => rd_reg.ACLR
+kin => kin.IN2
+din[0] => din[0].IN2
+din[1] => din[1].IN2
+din[2] => din[2].IN2
+din[3] => din[3].IN2
+din[4] => din[4].IN2
+din[5] => din[5].IN1
+din[6] => din[6].IN1
+din[7] => din[7].IN1
+dout[0] <= dout[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[1] <= dout[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= dout[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= dout[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= dout[4]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= dout[5]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= dout[6]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= dout[7]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[8] <= dout[8]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+dout[9] <= dout[9]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoder_8b10b|encoder_5b6b:u_enc_5b6b
+kin => Decoder0.IN0
+rd_in => Decoder0.IN1
+rd_in => Selector0.IN5
+data_in[0] => Decoder0.IN6
+data_in[1] => Decoder0.IN5
+data_in[2] => Decoder0.IN4
+data_in[3] => Decoder0.IN3
+data_in[4] => Decoder0.IN2
+data_out[0] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+data_out[4] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+data_out[5] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+rd_out <= Selector0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|encoder_8b10b|encoder_3b4b:u_enc_3b4b
+kin => Mux0.IN31
+kin => Decoder0.IN0
+kin => Mux1.IN31
+rd_mid => Mux0.IN32
+rd_mid => Decoder0.IN1
+rd_mid => Mux1.IN32
+data_in[0] => Mux0.IN35
+data_in[0] => Decoder0.IN4
+data_in[0] => Mux1.IN35
+data_in[1] => Mux0.IN34
+data_in[1] => Decoder0.IN3
+data_in[1] => Mux1.IN34
+data_in[2] => Mux0.IN33
+data_in[2] => Decoder0.IN2
+data_in[2] => Mux1.IN33
+data_5b[0] => Equal0.IN2
+data_5b[0] => Equal1.IN2
+data_5b[0] => Equal2.IN4
+data_5b[1] => Equal0.IN1
+data_5b[1] => Equal1.IN4
+data_5b[1] => Equal2.IN2
+data_5b[2] => Equal0.IN4
+data_5b[2] => Equal1.IN1
+data_5b[2] => Equal2.IN1
+data_5b[3] => Equal0.IN0
+data_5b[3] => Equal1.IN0
+data_5b[3] => Equal2.IN0
+data_5b[4] => Equal0.IN3
+data_5b[4] => Equal1.IN3
+data_5b[4] => Equal2.IN3
+data_out[0] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+data_out[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+data_out[2] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+data_out[3] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+rd_final <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+
+

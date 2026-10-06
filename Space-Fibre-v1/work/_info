@@ -1,0 +1,71 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\altera\13.0sp1\Banco de Registradores
+vd_flip_flop
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z2 IB^F_b2F]d52hl2:lTZbmA3
+Z3 VF6Q5NbK3kZoX7jHe6bDk:1
+S1
+Z4 dC:\altera\13.0sp1\Banco de Registradores
+Z5 w1787689798
+Z6 8d_flip_flop.sv
+Z7 Fd_flip_flop.sv
+L0 8
+Z8 OV;L;10.1d;51
+r1
+31
+Z9 o-work work -sv -O0
+Z10 !s100 `<afXWS;`_g0QO0XV0N>i2
+Z11 !s105 d_flip_flop_sv_unit
+Z12 !s108 1788457358.335000
+Z13 !s107 d_flip_flop.sv|
+Z14 !s90 -reportprogress|300|-work|work|-sv|d_flip_flop.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vregister_file
+R1
+Z15 IhQ^ZFneokfRA]<4<oAzcS3
+Z16 VPkS3>6`7I_DS0R89Rb<9C0
+S1
+R4
+Z17 w1788198640
+Z18 8register_file.sv
+Z19 Fregister_file.sv
+L0 14
+R8
+r1
+31
+R9
+!i10b 1
+Z20 !s100 PJ@8cmn<CB:gABJAlA>A30
+Z21 !s105 register_file_sv_unit
+!s85 0
+Z22 !s108 1788457358.383000
+Z23 !s107 register_file.sv|
+Z24 !s90 -reportprogress|300|-work|work|-sv|register_file.sv|
+!s101 -O0
+vtb_register_file
+R1
+!i10b 1
+!s100 9BXFV]Y84N8h>:S9Ih]Bi1
+IQ=W[g]^n>@<hz><N_3[8K3
+VUMaV@EO5IBZPREUT5WV^e3
+!s105 tb_register_file_sv_unit
+S1
+R4
+w1788199451
+8tb_register_file.sv
+Ftb_register_file.sv
+L0 8
+R8
+r1
+!s85 0
+31
+!s108 1788457358.430000
+!s107 tb_register_file.sv|
+!s90 -reportprogress|300|-work|work|-sv|tb_register_file.sv|
+!s101 -O0
+R9

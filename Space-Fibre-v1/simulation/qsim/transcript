@@ -1,0 +1,29 @@
+# do SpaceFibre.do 
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MUX4x1
+# 
+# Top level modules:
+# 	MUX4x1
+# Model Technology ModelSim ALTERA vlog 10.1d Compiler 2012.11 Nov  2 2012
+# -- Compiling module MUX4x1_vlg_sample_tst
+# -- Compiling module MUX4x1_vlg_check_tst
+# -- Compiling module MUX4x1_vlg_vec_tst
+# 
+# Top level modules:
+# 	MUX4x1_vlg_vec_tst
+# vsim -L cycloneive_ver -L altera_ver -L altera_mf_ver -L 220model_ver -L sgate -c -t 1ps -novopt work.MUX4x1_vlg_vec_tst 
+# Loading work.MUX4x1_vlg_vec_tst
+# Loading work.MUX4x1
+# Loading cycloneive_ver.cycloneive_io_ibuf
+# Loading cycloneive_ver.cycloneive_io_obuf
+# Loading cycloneive_ver.cycloneive_lcell_comb
+# Loading work.MUX4x1_vlg_sample_tst
+# Loading work.MUX4x1_vlg_check_tst
+# ERROR! Vector Mismatch for output port Y :: @time = 1000000.000 ps
+#      Expected value = 0
+#      Real value = 1
+#           1 mismatched vectors : Simulation failed !
+# ** Note: $finish    : SpaceFibre.vt(159)
+#    Time: 20 us  Iteration: 0  Instance: /MUX4x1_vlg_vec_tst/tb_out

@@ -1,0 +1,49 @@
+# =============================================================================
+# Projeto CI Amazonia - Script de Automação de Simulação (.do) - Versão 2
+# Descrição: Compila e executa o Testbench Autoverificável no ModelSim.
+# Correção: Removida a opção "-sharedcolwidth" incompatível com versões antigas do ModelSim.
+# Execução - digite: do simular_banco-v2.do
+# =============================================================================
+
+# Cria a biblioteca de trabalho (work) se não existir
+if [file exists work] {
+    vdel -all
+}
+vlib work
+
+echo "====================================================================="
+echo " COMPILANDO OS MÓDULOS EM SYSTEMVERILOG..."
+echo "====================================================================="
+
+# Compila as células lógicas e o banco de registradores
+vlog -work work -sv d_flip_flop.sv
+vlog -work work -sv register_file.sv
+
+# Compila o testbench autoverificável (Self-Checking Testbench)
+vlog -work work -sv tb_register_file.sv
+
+echo "====================================================================="
+echo " INICIANDO A SIMULAÇÃO..."
+echo "====================================================================="
+
+# Inicializa a simulação apontando para o módulo de teste de topo
+vsim -voptargs="+acc" work.tb_register_file
+
+# Adiciona todos os sinais do Testbench na janela Wave para inspeção visual
+add wave -position insertpoint sim:/tb_register_file/*
+
+# Configura as propriedades de exibição visual na Wave
+configure wave -namecolwidth 180
+configure wave -valuecolwidth 100
+configure wave -justifyvalue left
+configure wave -signalnamewidth 1
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+
+# Executa todos os estímulos programados no testbench
+run -all
+
+echo "====================================================================="
+echo " SIMULAÇÃO EXECUTADA COM SUCESSO!"
+echo " Verifique as saídas no console do ModelSim (PASS/FAIL)."
+echo "====================================================================="

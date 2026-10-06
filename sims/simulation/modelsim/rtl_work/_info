@@ -1,0 +1,97 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Manu\Downloads\SpaceFibre-novo\simulation\modelsim
+vd_flip_flop
+Z1 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+!i10b 1
+!s100 b01Oa_WFAl^:gb0Zg9CHk2
+I2WbnMk^fGQl^WPk=S8aMR3
+VF6Q5NbK3kZoX7jHe6bDk:1
+!s105 d_flip_flop_sv_unit
+S1
+Z2 dC:\Users\Manu\Downloads\SpaceFibre-novo\simulation\modelsim
+Z3 w1788459628
+8C:/Users/Manu/Downloads/SpaceFibre-novo/d_flip_flop.sv
+FC:/Users/Manu/Downloads/SpaceFibre-novo/d_flip_flop.sv
+L0 8
+Z4 OV;L;10.1d;51
+r1
+!s85 0
+31
+!s108 1789016441.861000
+!s107 C:/Users/Manu/Downloads/SpaceFibre-novo/d_flip_flop.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manu/Downloads/SpaceFibre-novo|C:/Users/Manu/Downloads/SpaceFibre-novo/d_flip_flop.sv|
+!s101 -O0
+Z5 o-sv -work work -O0
+Z6 !s92 -sv -work work +incdir+C:/Users/Manu/Downloads/SpaceFibre-novo -O0
+vdecoder_4_to_16
+R1
+ITh`47`0_hodlzQGYEQAB_2
+VonDHEPfoKUJ9`i01o1eK01
+S1
+R2
+R3
+8C:/Users/Manu/Downloads/SpaceFibre-novo/decoder_4_to_16.sv
+FC:/Users/Manu/Downloads/SpaceFibre-novo/decoder_4_to_16.sv
+L0 11
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 i:>@:RPZJe;:a6k1KlN:z3
+!s105 decoder_4_to_16_sv_unit
+!s85 0
+!s108 1789016441.697000
+!s107 C:/Users/Manu/Downloads/SpaceFibre-novo/decoder_4_to_16.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manu/Downloads/SpaceFibre-novo|C:/Users/Manu/Downloads/SpaceFibre-novo/decoder_4_to_16.sv|
+!s101 -O0
+vmux_16to1_8bit
+R1
+IzN=nPU3?aLX3[o9S?@Zzd2
+VJgiKN^_BF]g1SLSL@?`1V3
+S1
+R2
+R3
+8C:/Users/Manu/Downloads/SpaceFibre-novo/mux_16to1_8bit.sv
+FC:/Users/Manu/Downloads/SpaceFibre-novo/mux_16to1_8bit.sv
+L0 11
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 ?R6L;3YR2:3:>1D07I3>_0
+!s105 mux_16to1_8bit_sv_unit
+!s85 0
+!s108 1789016441.539000
+!s107 C:/Users/Manu/Downloads/SpaceFibre-novo/mux_16to1_8bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manu/Downloads/SpaceFibre-novo|C:/Users/Manu/Downloads/SpaceFibre-novo/mux_16to1_8bit.sv|
+!s101 -O0
+vregister_8bit
+R1
+I<]>E0Nb_XAH<>^i`K9fS@2
+V@a>6CR_WhH74;N`_`Zn`=3
+S1
+R2
+R3
+8C:/Users/Manu/Downloads/SpaceFibre-novo/register_8bit.sv
+FC:/Users/Manu/Downloads/SpaceFibre-novo/register_8bit.sv
+L0 10
+R4
+r1
+31
+R5
+R6
+!i10b 1
+!s100 SOf=^kP7JWnWXPR1o4K>^1
+!s105 register_8bit_sv_unit
+!s85 0
+!s108 1789016441.367000
+!s107 C:/Users/Manu/Downloads/SpaceFibre-novo/register_8bit.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/Manu/Downloads/SpaceFibre-novo|C:/Users/Manu/Downloads/SpaceFibre-novo/register_8bit.sv|
+!s101 -O0

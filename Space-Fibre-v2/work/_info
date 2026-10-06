@@ -1,0 +1,134 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\Manu\Downloads\SpaceFibre-novo
+vbanco_de_registadores_top
+Z1 IdfMTdP3X?JIL:1AA=fOz73
+Z2 VYna;Q_k6ce`BVXIalKhmJ3
+Z3 dC:\Users\Manu\Downloads\SpaceFibre-novo
+Z4 w1789018041
+Z5 8banco_de_registadores_top.v
+Z6 Fbanco_de_registadores_top.v
+L0 19
+Z7 OV;L;10.1d;51
+r1
+31
+o-O0
+!i10b 1
+Z8 !s100 @8CHTbzb@F_34fFS>Rf?U1
+!s85 0
+Z9 !s108 1789018159.999000
+Z10 !s107 banco_de_registadores_top.v|
+Z11 !s90 -reportprogress|300|banco_de_registadores_top.v|
+!s101 -O0
+vd_flip_flop
+Z12 DXx6 sv_std 3 std 0 22 F[19LRNL:5;XmIFh[XOPn1
+Z13 Ii;[;W@GBNHWWPM@PTnnn@1
+Z14 VF6Q5NbK3kZoX7jHe6bDk:1
+S1
+R3
+Z15 w1788459628
+Z16 8d_flip_flop.sv
+Z17 Fd_flip_flop.sv
+L0 8
+R7
+r1
+31
+Z18 o-sv -O0
+Z19 !s100 `<afXWS;`_g0QO0XV0N>i2
+Z20 !s105 d_flip_flop_sv_unit
+Z21 !s108 1789018125.646000
+Z22 !s107 d_flip_flop.sv|
+Z23 !s90 -reportprogress|300|-sv|d_flip_flop.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vdecoder_4_to_16
+R12
+Z24 IlP8D3R`=FAo7KXK1gGF_Q0
+Z25 VonDHEPfoKUJ9`i01o1eK01
+S1
+R3
+R15
+Z26 8decoder_4_to_16.sv
+Z27 Fdecoder_4_to_16.sv
+L0 11
+R7
+r1
+31
+R18
+Z28 !s100 Yok4TSWVTBUjzYBLLN:UF1
+Z29 !s105 decoder_4_to_16_sv_unit
+Z30 !s108 1789018140.654000
+Z31 !s107 decoder_4_to_16.sv|
+Z32 !s90 -reportprogress|300|-sv|decoder_4_to_16.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vmux_16to1_8bit
+R12
+Z33 Ifb4boDE_2e1VA]IHi:o4J2
+Z34 VQz1F1Ee>mK>leSBeOT^`00
+S1
+R3
+Z35 w1789017270
+Z36 8mux_16to1_8bit.sv
+Z37 Fmux_16to1_8bit.sv
+L0 11
+R7
+r1
+31
+R18
+Z38 !s100 HF]d^e5ZD8>L;ZCGfO6Sk3
+Z39 !s105 mux_16to1_8bit_sv_unit
+Z40 !s108 1789018153.458000
+Z41 !s107 mux_16to1_8bit.sv|
+Z42 !s90 -reportprogress|300|-sv|mux_16to1_8bit.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vregister_8bit
+R12
+Z43 IH0C3Z]SIc2>@B[1`C0UQ]0
+Z44 V@a>6CR_WhH74;N`_`Zn`=3
+S1
+R3
+R15
+Z45 8register_8bit.sv
+Z46 Fregister_8bit.sv
+L0 10
+R7
+r1
+31
+R18
+Z47 !s100 QkIJ8R3^MHJBj3MQUG?ZG0
+Z48 !s105 register_8bit_sv_unit
+Z49 !s108 1789018130.998000
+Z50 !s107 register_8bit.sv|
+Z51 !s90 -reportprogress|300|-sv|register_8bit.sv|
+!i10b 1
+!s85 0
+!s101 -O0
+vtb_banco_registradores
+R12
+!i10b 1
+!s100 <7>zdYJlC2VBIdC4=X>^?3
+ICmOAiGoGDizIhhc>Y]0]U0
+V>YEDcaM1=_][;MC=1VaE33
+!s105 tb_banco_registradores_sv_unit
+S1
+R3
+w1789016394
+8tb_banco_registradores.sv
+Ftb_banco_registradores.sv
+L0 3
+R7
+r1
+!s85 0
+31
+!s108 1789018164.888000
+!s107 tb_banco_registradores.sv|
+!s90 -reportprogress|300|-sv|tb_banco_registradores.sv|
+!s101 -O0
+R18
