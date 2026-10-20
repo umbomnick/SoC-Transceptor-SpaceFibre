@@ -1,0 +1,27 @@
+{
+  "DESIGN_NAME": "spacefibre_lane_top",
+  "VERILOG_FILES": [
+    "dir::src/spacefibre_lane_top.v",
+    "dir::src/fsm_layer.sv",
+    "dir::src/word_aligner.v",
+    "dir::src/elastic_buffer.v",
+    "dir::src/encoder_8b10b.v",
+    "dir::src/encoder_5b6b.v",
+    "dir::src/encoder_3b4b.v",
+    "dir::src/decoder_8b10b.v",
+    "dir::src/decoder_6b5b.v",
+    "dir::src/decoder_4b3b.v",
+    "dir::src/llcw_processor.v",
+    "dir::src/rxerr_counter.v"
+  ],
+  "CLOCK_PORT": "clk",
+  "CLOCK_PERIOD": 10.0,
+  "PDK": "sky130A",
+  "STD_CELL_LIBRARY": "sky130_fd_sc_hd",
+  "FP_CORE_UTIL": 45,
+  "PL_TARGET_DENSITY": 0.55,
+  "CELL_PAD": 4,
+  "DIODE_INSERTION_STRATEGY": 4,
+  "RUN_KLAYOUT_DRC": true,
+  "RUN_KLAYOUT_LVS": true
+}

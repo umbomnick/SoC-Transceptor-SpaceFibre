@@ -1,0 +1,39 @@
+# ============================================================================
+# Script de Síntese Yosys para SkyWater SKY130 (PDK Standard Cells HD)
+# Projeto: SoC Transceptor SpaceFibre (Lane Layer Top-Level) - v4
+# ============================================================================
+
+# 1. Carregar os arquivos RTL do projeto
+read_verilog -sv spacefibre_lane_top.v
+read_verilog -sv fsm_layer.sv
+read_verilog -sv word_aligner.v
+read_verilog -sv elastic_buffer.v
+read_verilog -sv encoder_8b10b.v
+read_verilog -sv encoder_5b6b.v
+read_verilog -sv encoder_3b4b.v
+read_verilog -sv decoder_8b10b.v
+read_verilog -sv decoder_6b5b.v
+read_verilog -sv decoder_4b3b.v
+read_verilog -sv llcw_processor.v
+read_verilog -sv rxerr_counter.v
+
+# 2. Definir o módulo Top-Level e elaborar a hierarquia
+hierarchy -check -top spacefibre_lane_top
+
+# 3. Síntese genérica (Converte registradores vetoriais/multibit em FFs e portas genéricas de 1 bit)
+synth -top spacefibre_lane_top
+
+# 4. Mapeamento de Flip-Flops para as células do SKY130 HD
+dfflibmap -liberty /foss/pdks/ciel/sky130/versions/1689ac3f2dc763876eaf967227c7dfe831b031ae/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# 5. Mapeamento da lógica combinacional via ABC para a tecnologia SKY130
+abc -liberty /foss/pdks/ciel/sky130/versions/1689ac3f2dc763876eaf967227c7dfe831b031ae/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# 6. Limpeza de nós órfãos e conexões não utilizadas
+clean
+
+# 7. Relatório de contagem de células e estimativa de área
+stat -liberty /foss/pdks/ciel/sky130/versions/1689ac3f2dc763876eaf967227c7dfe831b031ae/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib
+
+# 8. Salvar a Netlist final mapeada para o PDK
+write_verilog -noattr netlist_spacefibre_sky130.v
