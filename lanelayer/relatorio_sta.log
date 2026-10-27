@@ -1,0 +1,153 @@
+OpenSTA 3.1.0 f89887b596 Copyright (c) 2026, Parallax Software, Inc.
+License GPLv3: GNU GPL version 3 <http://gnu.org/licenses/gpl.html>
+
+This is free software, and you are free to change and redistribute it
+under certain conditions; type `show_copying' for details. 
+This program comes with ABSOLUTELY NO WARRANTY; for details type `show_warranty'.
+
+====================================================================
+                RELATÓRIO DE SETUP (MAX DELAY)                     
+====================================================================
+Startpoint: rst_n (input port clocked by clk)
+Endpoint: decoder_inst/_04_ (recovery check against rising-edge clock clk)
+Path Group: asynchronous
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                   0.000    0.000    0.000   clock clk (rise edge)
+                            0.000    0.000   clock network delay (ideal)
+                            2.000    2.000 ^ input external delay
+     4    0.012    0.155    0.101    2.101 ^ rst_n (in)
+                                             rst_n (net)
+                   0.155    0.000    2.101 ^ _27_/A (sky130_fd_sc_hd__lpflow_isobufsrc_1)
+   131    0.471    8.367    6.113    8.213 ^ _27_/X (sky130_fd_sc_hd__lpflow_isobufsrc_1)
+                                             _02_ (net)
+                   8.367    0.000    8.213 ^ decoder_inst/_04_/RESET_B (sky130_fd_sc_hd__dfrtp_1)
+                                     8.213   data arrival time
+
+                   0.000   10.000   10.000   clock clk (rise edge)
+                            0.000   10.000   clock network delay (ideal)
+                           -0.250    9.750   clock uncertainty
+                            0.000    9.750   clock reconvergence pessimism
+                                     9.750 ^ decoder_inst/_04_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                           -2.033    7.717   library recovery time
+                                     7.717   data required time
+---------------------------------------------------------------------------------
+                                     7.717   data required time
+                                    -8.213   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.497   slack (VIOLATED)
+
+
+Startpoint: rst_n (input port clocked by clk)
+Endpoint: elastic_buffer_inst/_470_
+          (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: max
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                   0.000    0.000    0.000   clock clk (rise edge)
+                            0.000    0.000   clock network delay (ideal)
+                            2.000    2.000 ^ input external delay
+     4    0.012    0.155    0.101    2.101 ^ rst_n (in)
+                                             rst_n (net)
+                   0.155    0.000    2.101 ^ _27_/A (sky130_fd_sc_hd__lpflow_isobufsrc_1)
+   131    0.471    8.367    6.113    8.213 ^ _27_/X (sky130_fd_sc_hd__lpflow_isobufsrc_1)
+                                             _02_ (net)
+                   8.367    0.000    8.213 ^ elastic_buffer_inst/_249_/A (sky130_fd_sc_hd__nand3_1)
+     4    0.009    1.306    0.797    9.010 v elastic_buffer_inst/_249_/Y (sky130_fd_sc_hd__nand3_1)
+                                             elastic_buffer_inst/_070_ (net)
+                   1.306    0.000    9.010 v elastic_buffer_inst/_252_/C (sky130_fd_sc_hd__nor3_1)
+    10    0.034    1.051    1.221   10.232 ^ elastic_buffer_inst/_252_/Y (sky130_fd_sc_hd__nor3_1)
+                                             elastic_buffer_inst/_013_ (net)
+                   1.051    0.000   10.232 ^ elastic_buffer_inst/_470_/DE (sky130_fd_sc_hd__edfxtp_1)
+                                    10.232   data arrival time
+
+                   0.000   10.000   10.000   clock clk (rise edge)
+                            0.000   10.000   clock network delay (ideal)
+                           -0.250    9.750   clock uncertainty
+                            0.000    9.750   clock reconvergence pessimism
+                                     9.750 ^ elastic_buffer_inst/_470_/CLK (sky130_fd_sc_hd__edfxtp_1)
+                           -0.392    9.358   library setup time
+                                     9.358   data required time
+---------------------------------------------------------------------------------
+                                     9.358   data required time
+                                   -10.232   data arrival time
+---------------------------------------------------------------------------------
+                                    -0.874   slack (VIOLATED)
+
+
+
+====================================================================
+                RELATÓRIO DE HOLD (MIN DELAY)                      
+====================================================================
+Startpoint: rst_n (input port clocked by clk)
+Endpoint: _42_ (removal check against rising-edge clock clk)
+Path Group: asynchronous
+Path Type: min
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                   0.000    0.000    0.000   clock clk (rise edge)
+                            0.000    0.000   clock network delay (ideal)
+                            2.000    2.000 ^ input external delay
+     4    0.012    0.155    0.101    2.101 ^ rst_n (in)
+                                             rst_n (net)
+                   0.155    0.000    2.101 ^ _42_/RESET_B (sky130_fd_sc_hd__dfrtp_1)
+                                     2.101   data arrival time
+
+                   0.000    0.000    0.000   clock clk (rise edge)
+                            0.000    0.000   clock network delay (ideal)
+                            0.250    0.250   clock uncertainty
+                            0.000    0.250   clock reconvergence pessimism
+                                     0.250 ^ _42_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                            0.338    0.588   library removal time
+                                     0.588   data required time
+---------------------------------------------------------------------------------
+                                     0.588   data required time
+                                    -2.101   data arrival time
+---------------------------------------------------------------------------------
+                                     1.512   slack (MET)
+
+
+Startpoint: llcw_proc_inst/_264_
+            (rising edge-triggered flip-flop clocked by clk)
+Endpoint: llcw_proc_inst/_264_ (rising edge-triggered flip-flop clocked by clk)
+Path Group: clk
+Path Type: min
+
+Fanout      Cap     Slew    Delay     Time   Description
+---------------------------------------------------------------------------------
+                   0.000    0.000    0.000   clock clk (rise edge)
+                            0.000    0.000   clock network delay (ideal)
+                   0.000    0.000    0.000 ^ llcw_proc_inst/_264_/CLK (sky130_fd_sc_hd__dfrtp_1)
+     1    0.002    0.037    0.288    0.288 ^ llcw_proc_inst/_264_/Q (sky130_fd_sc_hd__dfrtp_1)
+                                             rx_cmd_type[0] (net)
+                   0.037    0.000    0.288 ^ llcw_proc_inst/_180_/A0 (sky130_fd_sc_hd__mux2_1)
+     1    0.002    0.039    0.105    0.393 ^ llcw_proc_inst/_180_/X (sky130_fd_sc_hd__mux2_1)
+                                             llcw_proc_inst/_006_ (net)
+                   0.039    0.000    0.393 ^ llcw_proc_inst/_264_/D (sky130_fd_sc_hd__dfrtp_1)
+                                     0.393   data arrival time
+
+                   0.000    0.000    0.000   clock clk (rise edge)
+                            0.000    0.000   clock network delay (ideal)
+                            0.250    0.250   clock uncertainty
+                            0.000    0.250   clock reconvergence pessimism
+                                     0.250 ^ llcw_proc_inst/_264_/CLK (sky130_fd_sc_hd__dfrtp_1)
+                           -0.040    0.210   library hold time
+                                     0.210   data required time
+---------------------------------------------------------------------------------
+                                     0.210   data required time
+                                    -0.393   data arrival time
+---------------------------------------------------------------------------------
+                                     0.183   slack (MET)
+
+
+
+====================================================================
+                    RESUMO DOS PIORES SLACKS                        
+====================================================================
+worst slack max -0.87
+worst slack min 0.18

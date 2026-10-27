@@ -1,5 +1,5 @@
 $date
-	Tue Oct  6 16:47:39 2026
+	Tue Oct 27 14:47:44 2026
 $end
 $version
 	Icarus Verilog
@@ -20,8 +20,8 @@ $var wire 1 $ kin $end
 $var wire 1 % rst_n $end
 $var wire 1 ' rd_next $end
 $var wire 1 ( rd_mid $end
-$var wire 6 ) code_5b6b [5:0] $end
-$var wire 4 * code_3b4b [3:0] $end
+$var wire 6 ) data_6b [5:0] $end
+$var wire 4 * data_4b [3:0] $end
 $var reg 10 + dout [9:0] $end
 $var reg 1 , rd_reg $end
 $scope module u_enc_3b4b $end
@@ -131,9 +131,9 @@ b11011010 !
 b11011010 +
 1"
 #100000
+0'
 b101 *
 b101 1
-1'
 0(
 b110000 )
 b110000 4
@@ -146,16 +146,27 @@ b11100 .
 b10111100 #
 b10111100 &
 #110000
+1'
+b1010 *
+b1010 1
+b11101 0
+1(
+b1111 )
+b1111 4
+b1011100 3
 b1100000101 !
 b1100000101 +
+0,
 1"
 #120000
-1'
-1(
+0'
+b101 *
+b101 1
+0(
 b101010 )
 b101010 4
-b1010 0
-b110101 3
+b10 0
+b10101 3
 b10101 2
 b10 /
 b10101 .
