@@ -11,7 +11,7 @@ read_liberty /foss/pdks/ciel/sky130/versions/1689ac3f2dc763876eaf967227c7dfe831b
 read_verilog netlist_spacefibre_sky130.v
 
 # 3. Mapear o módulo top-level
-link_design spacefibre_lane_top
+link_design lane_layer_top
 
 # 4. Carregar o arquivo de restrições SDC
 read_sdc spacefibre_lane_top.sdc

@@ -5,7 +5,7 @@
 # ============================================================================
 
 # 1. Definir o clock principal (Período de 10.0 ns = 100 MHz)
-create_clock -name clk -period 10.0 [get_ports clk]
+create_clock -name clk -period 8.0 [get_ports clk]
 
 # 2. Incerteza do clock (Jitter/Skew estimado para síntese e STA)
 set_clock_uncertainty 0.25 [get_clocks clk]
