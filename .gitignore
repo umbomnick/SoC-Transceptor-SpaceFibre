@@ -1,4 +1,12 @@
+<<<<<<< HEAD
 sims/
 *.vcd
 *.vvp
 *.vpp
+=======
+build/
+*.vcd
+*.vvp
+syn/netlist_*.v
+syn/*.log
+>>>>>>> d71ea31 (Estrutura rtl/ unificada (Lane + Data Link + Network))
