@@ -1,4 +1,4 @@
-# SoC Transceptor SpaceFibre Brasileiro (ECSS-E-ST-50-11C — SKY130)
+# SoC Transceptor SpaceFibre (ECSS-E-ST-50-11C — SKY130)
 
 Implementacao RTL unificada em Verilog/SystemVerilog sintetizavel das camadas digitais do protocolo **SpaceFibre** conforme a norma europeia **ECSS-E-ST-50-11C** (*SpaceFibre — Very high-speed serial link*, 15 de maio de 2019), voltada a fabricacao ASIC no PDK aberto **SkyWater SKY130 (`sky130_fd_sc_hd`, 130 nm)**.
 
