@@ -1,0 +1,33 @@
+{
+  "DESIGN_NAME": "spacefibre_node_top",
+  "VERILOG_FILES": [
+    "dir::rtl/top/spacefibre_node_top.v",
+    "dir::rtl/network/sf_network.v",
+    "dir::rtl/datalink/sf_datalink.v",
+    "dir::rtl/datalink/sf_fifo.v",
+    "dir::rtl/datalink/sf_scrambler.v",
+    "dir::rtl/datalink/sf_crc16.v",
+    "dir::rtl/datalink/sf_crc8.v",
+    "dir::rtl/lane/spacefibre_lane_top.v",
+    "dir::rtl/lane/fsm_layer.sv",
+    "dir::rtl/lane/word_aligner.v",
+    "dir::rtl/lane/rx_word_sync.v",
+    "dir::rtl/lane/elastic_buffer.v",
+    "dir::rtl/lane/encoder_8b10b.v",
+    "dir::rtl/lane/encoder_5b6b.v",
+    "dir::rtl/lane/encoder_3b4b.v",
+    "dir::rtl/lane/decoder_8b10b.v",
+    "dir::rtl/lane/decoder_6b5b.v",
+    "dir::rtl/lane/decoder_4b3b.v",
+    "dir::rtl/lane/llcw_processor.v",
+    "dir::rtl/lane/rxerr_counter.v"
+  ],
+  "CLOCK_PORT": "clk",
+  "CLOCK_PERIOD": 10.0,
+  "PNR_SDC_FILE": "dir::syn/spacefibre_node_top_100mhz.sdc",
+  "SIGNOFF_SDC_FILE": "dir::syn/spacefibre_node_top_100mhz.sdc",
+  "PDK": "sky130A",
+  "STD_CELL_LIBRARY": "sky130_fd_sc_hd",
+  "FP_CORE_UTIL": 40,
+  "MAX_FANOUT_CONSTRAINT": 10
+}

@@ -1,0 +1,5 @@
+build/
+*.vcd
+*.vvp
+syn/netlist_*.v
+syn/*.log
